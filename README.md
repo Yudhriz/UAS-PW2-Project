@@ -8,11 +8,11 @@ Kelompok
 5. Sabrina Ramadhani
 
 Peran & Tugas :
-Umar Hanif W (Frontend)
-Sabrina Ramadhani (Frontend)
-Muhammad Hilmy (Backend)
-Nur Ikhsan (Backend)
-Yudha Rizky Alvingky (Frontend & Backend)
+1. Umar Hanif W (Frontend)
+2. Sabrina Ramadhani (Frontend)
+3. Muhammad Hilmy (Backend)
+4. Nur Ikhsan (Backend)
+5. Yudha Rizky Alvingky (Frontend & Backend)
 
 
 Link Db :
