@@ -1,4 +1,4 @@
-# Suntronik Store
+# Suntronic Store
 
 Kelompok
 1. Yudha Rizky Alvingky
