@@ -1,4 +1,4 @@
-@extends('admin.layout.appadmin')
+@extends('admin.layouts.appadmin')
 @section('content')
 <form method="POST" action="{{url('/produk/produk')}}" enctype="multipart/form-data">
     {{ csrf_field() }}
