@@ -6,7 +6,7 @@
               <span class="hide-menu">Home</span>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="./index.html" aria-expanded="false">
+              <a class="sidebar-link" href="{{url('dashboard')}}" aria-expanded="false">
                 <span>
                   <i class="ti ti-layout-dashboard"></i>
                 </span>
@@ -39,6 +39,14 @@
                   <i class="ti ti-article"></i>
                 </span>
                 <span class="hide-menu">pesanan</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="{{url('pelanggan')}}" aria-expanded="false">
+                <span>
+                  <i class="ti ti-article"></i>
+                </span>
+                <span class="hide-menu">pelanggan</span>
               </a>
             </li>
             <li class="nav-small-cap">
