@@ -26,14 +26,29 @@
                     <th>No</th>
                     <th>Kode</th>
                     <th>Nama</th>
-                    <th>Harga_Jual</th>
-                    <th>Harga_Beli</th>
+                    <th>Harga Jual</th>
+                    <th>Harga Beli</th>
                     <th>Stok</th>
-                    <th>Min_Stok</th>
-                    <th>Kategori_Produk_ID</th>
-                    <th>Aksi</th>
+                    <th>Minimal Stok</th>
+                    <th>Deskripi</th>
+                    <th>Kategori Produk</th>
+                    <th>Action</th>
                 </tr>
             </thead>
+            <tfoot>
+                <tr>
+                    <th>No</th>
+                    <th>Kode</th>
+                    <th>Nama</th>
+                    <th>Harga Jual</th>
+                    <th>Harga Beli</th>
+                    <th>Stok</th>
+                    <th>Minimal Stok</th>
+                    <th>Deskripsi</th>
+                    <th>Kategori Produk</th>
+                    <th>Action</th>
+                </tr>
+            </tfoot>
             <tbody>
                 <tr>
                     <td>no</td>

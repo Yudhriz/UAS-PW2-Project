@@ -20,6 +20,7 @@
 <script src="{{asset('admin/assets/libs/apexcharts/dist/apexcharts.min.js')}}"></script>
 <script src="{{asset('admin/assets/libs/simplebar/dist/simplebar.js')}}"></script>
 <script src="{{asset('admin/assets/js/dashboard.js')}}"></script>
+<script src="{{asset('admin/js/datatables-simple-demo.js')}}"></script>
 </body>
 
 </html>
