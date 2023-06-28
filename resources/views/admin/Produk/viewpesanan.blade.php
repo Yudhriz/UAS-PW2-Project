@@ -10,32 +10,12 @@
                 <td>{{ $ps->id }}</td>
             </tr>
             <tr>
+            <th>Pelanggan id</th>
+                <td>{{ $ps->pelanggan_id}}</td>
+            </tr>
+            <tr>
                 <th>Tanggal</th>
-                <td>{{ $ps->tanggal }}</td>
-            </tr>
-            <tr>
-                <th>Nama</th>
-                <td>{{ $ps->nama_pemesan }}</td>
-            </tr>
-            <tr>
-                <th>Alamat</th>
-                <td>{{ $ps->alamat_pemesan }}</td>
-            </tr>
-            <tr>
-                <th>No.HP</th>
-                <td>{{ $ps->no_hp }}</td>
-            </tr>
-            <tr>
-                <th>Email</th>
-                <td>{{ $ps->email }}</td>
-            </tr>
-            <tr>
-                <th>Jumlah pesanan</th>
-                <td>{{ $ps->jumlah_pesanan }}</td>
-            </tr>
-            <tr>
-                <th>Deskripsi</th>
-                <td>{{ $ps->deskripsi }}</td>
+                <td>{{ $ps->tgl_pesanan }}</td>
             </tr>
             <tr>
                 <th>Produk-ID</th>

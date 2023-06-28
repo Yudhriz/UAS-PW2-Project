@@ -86,5 +86,6 @@ class PesananController extends Controller
     public function destroy(string $id)
     {
         DB::table('pesanan')->where('id', $id)->delete();
+        return redirect('pesanan');
     }
 }

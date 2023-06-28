@@ -16,41 +16,34 @@
 <div class="card mb-4">
     <div class="card-header">
         <!-- <i class="fas fa-table me-1"></i> -->
-        <a class="btn btn-primary" href="{{url('produk/createpesanan')}}">Create Pesanan</a>
+        <a class="btn btn-primary" href="{{url('/pesanan/createpesanan')}}">Create Pesanan</a>
     </div>
-    <div class="card-body">
+    <div class="card-body table-responsive">
         <table id="datatablesSimple">
             <thead>
                 <tr>
                     <th>No</th>
-                    <th>tanggal</th>
-                    <th>Nama_pemesan</th>
-                    <th>alamat_pemesan</th>
-                    <th>no_hp</th>
-                    <th>email</th>
-                    <th>jumlah_pesanan</th>
-                    <th>deskripsi</th>
+                    <th>Pelanggan id</th>
+                    <th>tgl_pesanan</th>
                     <th>produk_id</th>
                     <th>Aksi</th>
                 </tr>
             </thead>
             <tbody>
+                @php $no = 1; @endphp
+                @foreach($pesanan as $ps)
                 <tr>
-                    <td>no</td>
-                    <td>tanggal</td>
-                    <td>nama_pemesan</td>
-                    <td>alamat_pemesan</td>
-                    <td>no_hp</td>
-                    <td>email</td>
-                    <td>jumlah_pesanan</td>
-                    <td>deskripsi</td>
-                    <td>produk_id</td>
+                    <td>{{$no++}}</td>
+                    <td>{{$ps->pelanggan_id}}</td>
+                    <td>{{$ps->tgl_pesanan}}</td>
+                    <td>{{$ps->produk_id}}</td>
                     <td>
-                        <a class="btn btn-primary"href= "{{url('/pesanan/show/')}}">View</a>
-                        <a class="btn btn-primary" href="{{url('/pesanan/edit/')}}">Edit</a>
-                        <a class="btn btn-primary" href="{{url('/pesanan/delete/')}}" onclick="if(!confirm('Anda Yakin Hapus Data Produk?')) {return false}">Delete</a>
+                        <a class="btn btn-primary" href="{{url('/pesanan/viewpesanan/'.$ps->id)}})}}">View</a>
+                        <a class="btn btn-primary" href="{{url('/pesanan/editpesanan/'.$ps->id)}})}}">Edit</a>
+                        <a class="btn btn-primary" href="{{url('/pesanan/delete/'.$ps->id)}})}}" onclick="if(!confirm('Anda Yakin Hapus Data Pesanan?')) {return false}">Delete</a>
                     </td>
                 </tr>
+                @endforeach
             </tbody>
         </table>
     </div>
