@@ -1,4 +1,4 @@
-# Judul Pending
+# Suntronic Store
 
 Kelompok
 1. Yudha Rizky Alvingky
@@ -8,7 +8,12 @@ Kelompok
 5. Sabrina Ramadhani
 
 Peran & Tugas :
-pending
+1. Umar Hanif W (Frontend)
+2. Sabrina Ramadhani (Frontend)
+3. Muhammad Hilmy (Backend)
+4. Nur Ikhsan (Backend)
+5. Yudha Rizky Alvingky (Frontend & Backend)
+
 
 Link Db :
 Pending
