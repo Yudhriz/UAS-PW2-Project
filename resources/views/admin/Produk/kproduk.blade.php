@@ -36,7 +36,7 @@
                     <td>
                         <a class="btn btn-primary" href="{{url('/kproduk/viewkproduk/'.$kp->id)}}">View</a>
                         <a class="btn btn-primary" href="{{url('/kproduk/editkproduk/'.$kp->id)}}">Edit</a>
-                        <a class="btn btn-primary" href="{{url('/kproduk/delete/'.$kp->id)}}" onclick="if(!confirm('Anda Yakin Hapus Data Produk?')) {return false}">Delete</a>
+                        <a class="btn btn-primary" href="{{url('/kproduk/delete/'.$kp->id)}}" onclick="if(!confirm('Anda Yakin Hapus Data Kategori Produk?')) {return false}">Delete</a>
                     </td>
                 </tr>
                 @endforeach
