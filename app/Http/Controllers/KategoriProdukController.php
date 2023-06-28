@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\support\facades\DB;
+use App\Models\KategoriProduk;
 use Illuminate\Http\Request;
 
 class KategoriProdukController extends Controller
@@ -11,7 +13,11 @@ class KategoriProdukController extends Controller
      */
     public function index()
     {
-        return view('admin.produk.kproduk');
+        $kategori_produk = DB::table('kategori_produk')
+            ->select('kategori_produk.*')
+            ->get();
+        //perintah join diatas untuk menggabungkan tabel produk dan kategori_produk
+        return view('admin.produk.kproduk', compact('kategori_produk'));
     }
 
     /**
@@ -19,7 +25,9 @@ class KategoriProdukController extends Controller
      */
     public function create()
     {
-        //
+        $kategori_produk = DB::table('kategori_produk')->get();
+        $produk = DB::table('produk')->get();
+        return view('admin.produk.createkproduk', compact('kategori_produk', 'produk'));
     }
 
     /**
@@ -27,7 +35,10 @@ class KategoriProdukController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $kategori_produk = new KategoriProduk;
+        $kategori_produk->nama = $request->nama;
+        $kategori_produk->save();
+        return redirect('kategori_produk');
     }
 
     /**
@@ -35,23 +46,29 @@ class KategoriProdukController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $kproduk = DB::table('kategori_produk')->where('id', $id)->get();
+        return view('admin.produk.viewkproduk', compact('kproduk'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit($id)
     {
-        //
+        $kproduk = DB::table('kategori_produk')->where('id', $id)->get();
+        return view('admin.produk.editkproduk', compact('kproduk'));
     }
+
 
     /**
      * Update the specified resource in storage.
      */
     public function update(Request $request, string $id)
     {
-        //
+        $kategori_produk = KategoriProduk::find($request->id);
+        $kategori_produk->nama = $request->nama;
+        $kategori_produk->save();
+        return redirect('kategori_produk');
     }
 
     /**
@@ -59,6 +76,6 @@ class KategoriProdukController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        DB::table('kategori_produk')->where('id', $id)->delete();
     }
 }
