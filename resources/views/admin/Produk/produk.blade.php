@@ -17,7 +17,7 @@
 <div class="card mb-4">
     <div class="card-header">
         <!-- <i class="fas fa-table me-1"></i> -->
-        <a class="btn btn-primary" href="{{url('admin/produk/create')}}">Tambah</a>
+        <a class="btn btn-primary" href="{{url('/produk/createproduk')}}">Tambah</a>
     </div>
     <div class="card-body">
         <table id="datatablesSimple">
@@ -62,7 +62,7 @@
                     <td>kategori_produk_id</td>
                     <td>
                         <a class="btn btn-primary" href="{{url('/produk/viewproduk/')}}">View</a>
-                        <a class="btn btn-primary" href="{{url('/produk/edit/')}}">Edit</a>
+                        <a class="btn btn-primary" href="{{url('/produk/editproduk/')}}">Edit</a>
                         <a class="btn btn-primary" href="{{url('/produk/delete/')}}" onclick="if(!confirm('Anda Yakin Hapus Data Produk?')) {return false}">Delete</a>
                     </td>
                 </tr>
