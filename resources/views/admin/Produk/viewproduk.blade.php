@@ -1,6 +1,6 @@
 @extends('admin.layouts.appadmin')
 @section('content')
-<form method="POST" action="{{url('/produk/show')}}" enctype="multipart/form-data">
+<form method="POST" action="{{url('/admin/produk/show')}}" enctype="multipart/form-data">
     {{ csrf_field() }}
     @foreach ($produk as $p)
     <table class="table table-striped">

@@ -11,7 +11,7 @@
 <br>
 <h1>Form Input Pesanan</h1>
 <div class="col-8 ">
-  <form method="POST" action="{{url('/pesanan/store')}}" enctype="multipart/form-data">
+  <form method="POST" action="{{url('/admin/pesanan/store')}}" enctype="multipart/form-data">
     {{ csrf_field() }}
     @foreach ($pesanan as $ps)
     <input type="hidden" name="id" value="{{$ps->id}}">

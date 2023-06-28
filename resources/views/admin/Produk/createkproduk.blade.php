@@ -11,7 +11,7 @@
 <br>
 <h1 >Form Input Kategori Produk</h1>
 <div class="col-8 ">
-<form method="POST" action="{{url('/kproduk/store')}}" enctype="multipart/form-data" >
+<form method="POST" action="{{url('/admin/kproduk/store')}}" enctype="multipart/form-data" >
 {{ csrf_field() }}
   <div class="form-group row">
     <label for="text1" class="col-4 col-form-label">Nama Kategori produk</label> 

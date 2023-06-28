@@ -17,7 +17,7 @@
 <div class="card mb-4">
     <div class="card-header">
         <!-- <i class="fas fa-table me-1"></i> -->
-        <a class="btn btn-primary" href="{{url('/produk/createproduk')}}">Tambah</a>
+        <a class="btn btn-primary" href="{{url('/admin/produk/createproduk')}}">Tambah</a>
     </div>
     <div class="card-body table-responsive">
         <table id="datatablesSimple">
@@ -47,9 +47,9 @@
                     <td>{{$p->stok}}</td>
                     <td>{{$p->foto_produk}}</td>
                     <td>
-                        <a class="btn btn-primary" href="{{url('/produk/viewproduk/'.$p->id)}}">View</a>
-                        <a class="btn btn-primary" href="{{url('/produk/editproduk/'.$p->id)}}">Edit</a>
-                        <a class="btn btn-primary" href="{{url('/produk/delete/'.$p->id)}}" onclick="if(!confirm('Anda Yakin Hapus Data Produk?')) {return false}">Delete</a>
+                        <a class="btn btn-primary" href="{{url('/admin/produk/viewproduk/'.$p->id)}}">View</a>
+                        <a class="btn btn-primary" href="{{url('/admin/produk/editproduk/'.$p->id)}}">Edit</a>
+                        <a class="btn btn-primary" href="{{url('/admin/produk/delete/'.$p->id)}}" onclick="if(!confirm('Anda Yakin Hapus Data Produk?')) {return false}">Delete</a>
                     </td>
                 </tr>
                 @endforeach
