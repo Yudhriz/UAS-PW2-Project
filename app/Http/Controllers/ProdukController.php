@@ -39,7 +39,7 @@ class ProdukController extends Controller
     {
         $kategori_produk = DB::table('kategori_produk')->get();
         $produk = DB::table('produk')->get();
-        return view('admin.produk.createproduk', compact('kproduk', 'produk'));
+        return view('admin.produk.createproduk', compact('kategori_produk', 'produk'));
     }
 
     /**
@@ -105,5 +105,6 @@ class ProdukController extends Controller
     public function destroy(string $id)
     {
         DB::table('produk')->where('id', $id)->delete();
+        return redirect('produk');
     }
 }
