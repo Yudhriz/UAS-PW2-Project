@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\KategoriProduk;
 use App\Models\Produk;
 use App\Models\Pesanan;
-use Illuminate\support\facades\DB;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class ProdukController extends Controller

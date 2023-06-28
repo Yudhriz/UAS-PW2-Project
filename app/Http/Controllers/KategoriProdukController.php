@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\support\facades\DB;
+use Illuminate\Support\Facades\DB;
 use App\Models\KategoriProduk;
 use Illuminate\Http\Request;
 
