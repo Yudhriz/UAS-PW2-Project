@@ -11,7 +11,7 @@
 <br>
 <h1>Form Input Produk</h1>
 <div class="col-8 ">
-  <form method="POST" action="{{url('/produk/store')}}" enctype="multipart/form-data">
+  <form method="POST" action="{{url('/admin/produk/store')}}" enctype="multipart/form-data">
     {{ csrf_field() }}
     <div class="form-group row">
       <div class="form-group row">

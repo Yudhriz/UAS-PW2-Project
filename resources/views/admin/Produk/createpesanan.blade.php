@@ -11,7 +11,7 @@
 <br>
 <h1>Form Input Pesanan</h1>
 <div class="col-8 ">
-  <form method="POST" action="{{url('/pesanan/store')}}" enctype="multipart/form-data">
+  <form method="POST" action="{{url('/admin/pesanan/store')}}" enctype="multipart/form-data">
     {{ csrf_field() }}
     <div class="form-group row">
       <label for="select" class="col-4 col-form-label">Pelanggan ID</label>

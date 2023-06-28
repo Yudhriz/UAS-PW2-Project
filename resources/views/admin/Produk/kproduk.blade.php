@@ -16,7 +16,7 @@
 <div class="card mb-4">
     <div class="card-header">
         <!-- <i class="fas fa-table me-1"></i> -->
-        <a class="btn btn-primary" href="{{url('/kproduk/createkproduk')}}">Create Kategori</a>
+        <a class="btn btn-primary" href="{{url('/admin/kproduk/createkproduk')}}">Create Kategori</a>
     </div>
     <div class="card-body table-responsive">
         <table id="datatablesSimple">
@@ -34,9 +34,9 @@
                     <td>{{$no++}}</td>
                     <td>{{$kp->nama}}</td>
                     <td>
-                        <a class="btn btn-primary" href="{{url('/kproduk/viewkproduk/'.$kp->id)}}">View</a>
-                        <a class="btn btn-primary" href="{{url('/kproduk/editkproduk/'.$kp->id)}}">Edit</a>
-                        <a class="btn btn-primary" href="{{url('/kproduk/delete/'.$kp->id)}}" onclick="if(!confirm('Anda Yakin Hapus Data Kategori Produk?')) {return false}">Delete</a>
+                        <a class="btn btn-primary" href="{{url('/admin/kproduk/viewkproduk/'.$kp->id)}}">View</a>
+                        <a class="btn btn-primary" href="{{url('/admin/kproduk/editkproduk/'.$kp->id)}}">Edit</a>
+                        <a class="btn btn-primary" href="{{url('/admin/kproduk/delete/'.$kp->id)}}" onclick="if(!confirm('Anda Yakin Hapus Data Kategori Produk?')) {return false}">Delete</a>
                     </td>
                 </tr>
                 @endforeach

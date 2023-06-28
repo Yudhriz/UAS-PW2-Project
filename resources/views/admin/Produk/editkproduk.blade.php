@@ -8,7 +8,7 @@
 <br>
 <h1>Form Input Kategori Produk</h1>
 <div class="col-8">
-<form method="POST" action="{{url('/kproduk/update')}}" enctype="multipart/form-data">
+<form method="POST" action="{{url('/admin/kproduk/update')}}" enctype="multipart/form-data">
     {{ csrf_field() }}
     @foreach ($kproduk as $kp)
     <div class="form-group row">

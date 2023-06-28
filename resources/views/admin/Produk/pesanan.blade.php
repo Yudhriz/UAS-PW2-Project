@@ -16,7 +16,7 @@
 <div class="card mb-4">
     <div class="card-header">
         <!-- <i class="fas fa-table me-1"></i> -->
-        <a class="btn btn-primary" href="{{url('/pesanan/createpesanan')}}">Create Pesanan</a>
+        <a class="btn btn-primary" href="{{url('/admin/pesanan/createpesanan')}}">Create Pesanan</a>
     </div>
     <div class="card-body table-responsive">
         <table id="datatablesSimple">
@@ -38,9 +38,9 @@
                     <td>{{$ps->tgl_pesanan}}</td>
                     <td>{{$ps->produk_id}}</td>
                     <td>
-                        <a class="btn btn-primary" href="{{url('/pesanan/viewpesanan/'.$ps->id)}})}}">View</a>
-                        <a class="btn btn-primary" href="{{url('/pesanan/editpesanan/'.$ps->id)}})}}">Edit</a>
-                        <a class="btn btn-primary" href="{{url('/pesanan/delete/'.$ps->id)}})}}" onclick="if(!confirm('Anda Yakin Hapus Data Pesanan?')) {return false}">Delete</a>
+                        <a class="btn btn-primary" href="{{url('/admin/pesanan/viewpesanan/'.$ps->id)}})}}">View</a>
+                        <a class="btn btn-primary" href="{{url('/admin/pesanan/editpesanan/'.$ps->id)}})}}">Edit</a>
+                        <a class="btn btn-primary" href="{{url('/admin/pesanan/delete/'.$ps->id)}})}}" onclick="if(!confirm('Anda Yakin Hapus Data Pesanan?')) {return false}">Delete</a>
                     </td>
                 </tr>
                 @endforeach
