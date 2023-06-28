@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\KategoriProdukController;
@@ -27,6 +28,10 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/', function () {
     return view('index');
 });
+
+//Admin
+Route::group(['middleware' => ['auth']], function () {
+    Route::prefix('admin')->name('admin.')->group(function () {
 
 //Admin produk
 Route::get('/dashboard',[DashboardController::class, 'index']);
@@ -58,6 +63,8 @@ Route::get('/pesanan/editpesanan/{id}', [PesananController::class, 'edit'])->nam
 
 //Admin pelanggan
 Route::get('/pelanggan',[PelangganController::class, 'index']);
+    });
+});
 
 Auth::routes();
 
