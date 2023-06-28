@@ -7,8 +7,7 @@ use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\KategoriProdukController;
 use App\Http\Controllers\PesananController;
 use App\Http\Controllers\PelangganController;
-use App\Http\Controllers\HomeController
-  
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Auth;
 
 /*
