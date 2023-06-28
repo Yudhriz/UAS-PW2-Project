@@ -49,6 +49,12 @@ Route::get('/kproduk/editkproduk/{id}', [KategoriProdukController::class, 'edit'
 
 //Admin pesanan
 Route::get('/pesanan',[PesananController::class, 'index']);
+Route::post('/pesanan/store',[PesananController::class, 'store']);
+Route::post('/pesanan/update', [PesananController::class, 'update']);
+Route::get('/pesanan/delete/{id}', [PesananController::class, 'destroy']);
+Route::get('/pesanan/viewpesanan/{id}', [PesananController::class, 'show'])->name('show');
+Route::get('/pesanan/createpesanan', [PesananController::class, 'create'])->name('create');
+Route::get('/pesanan/editpesanan/{id}', [PesananController::class, 'edit'])->name('edit');
 
 //Admin pelanggan
 Route::get('/pelanggan',[PelangganController::class, 'index']);
