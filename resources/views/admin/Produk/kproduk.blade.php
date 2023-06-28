@@ -16,9 +16,9 @@
 <div class="card mb-4">
     <div class="card-header">
         <!-- <i class="fas fa-table me-1"></i> -->
-        <a class="btn btn-primary" href="{{url('produk/createkproduk')}}">Create Kategori</a>
+        <a class="btn btn-primary" href="{{url('/kproduk/createkproduk')}}">Create Kategori</a>
     </div>
-    <div class="card-body">
+    <div class="card-body table-responsive">
         <table id="datatablesSimple">
             <thead>
                 <tr>
@@ -28,15 +28,18 @@
                 </tr>
             </thead>
             <tbody>
+            @php $no = 1; @endphp
+                @foreach($kategori_produk as $kp)
                 <tr>
-                    <td>no</td>
-                    <td>nama</td>
+                    <td>{{$no++}}</td>
+                    <td>{{$kp->nama}}</td>
                     <td>
-                        <a class="btn btn-primary" href="{{url('/produk/viewkproduk/')}}">View</a>
-                        <a class="btn btn-primary" href="{{url('/produk/editkproduk/')}}">Edit</a>
-                        <a class="btn btn-primary" href="{{url('/kproduk/delete/')}}" onclick="if(!confirm('Anda Yakin Hapus Data Produk?')) {return false}">Delete</a>
+                        <a class="btn btn-primary" href="{{url('/kproduk/viewkproduk/'.$kp->id)}}">View</a>
+                        <a class="btn btn-primary" href="{{url('/kproduk/editkproduk/'.$kp->id)}}">Edit</a>
+                        <a class="btn btn-primary" href="{{url('/kproduk/delete/'.$kp->id)}}" onclick="if(!confirm('Anda Yakin Hapus Data Produk?')) {return false}">Delete</a>
                     </td>
                 </tr>
+                @endforeach
             </tbody>
         </table>
     </div>
