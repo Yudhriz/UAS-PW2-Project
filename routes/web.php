@@ -1,12 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\KategoriProdukController;
 use App\Http\Controllers\PesananController;
 use App\Http\Controllers\PelangganController;
-use App\Http\Controllers\HomeController;
+use App\Http\Controllers\HomeController
+  
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -27,6 +29,10 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/', function () {
     return view('index');
 });
+
+//Admin
+Route::group(['middleware' => ['auth']], function () {
+    Route::prefix('admin')->name('admin.')->group(function () {
 
 //Admin produk
 Route::get('/dashboard',[DashboardController::class, 'index']);
@@ -52,6 +58,8 @@ Route::get('/pesanan',[PesananController::class, 'index']);
 
 //Admin pelanggan
 Route::get('/pelanggan',[PelangganController::class, 'index']);
+    });
+});
 
 Auth::routes();
 
