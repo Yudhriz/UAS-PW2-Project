@@ -6,7 +6,7 @@
               <span class="hide-menu">Home</span>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="{{url('admin.dashboard')}}" aria-expanded="false">
+              <a class="sidebar-link" href="{{url('admin/dashboard')}}" aria-expanded="false">
                 <span>
                   <i class="ti ti-layout-dashboard"></i>
                 </span>
@@ -18,7 +18,7 @@
               <span class="hide-menu">Page</span>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="{{url('admin.produk')}}" aria-expanded="false">
+              <a class="sidebar-link" href="{{url('admin/produk')}}" aria-expanded="false">
                 <span>
                   <i class="ti ti-article"></i>
                 </span>
@@ -26,7 +26,7 @@
               </a>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="{{url('admin.kproduk')}}" aria-expanded="false">
+              <a class="sidebar-link" href="{{url('admin/kproduk')}}" aria-expanded="false">
                 <span>
                   <i class="ti ti-article"></i>
                 </span>
@@ -34,7 +34,7 @@
               </a>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="{{url('admin.pesanan')}}" aria-expanded="false">
+              <a class="sidebar-link" href="{{url('admin/pesanan')}}" aria-expanded="false">
                 <span>
                   <i class="ti ti-article"></i>
                 </span>
@@ -42,7 +42,7 @@
               </a>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="{{url('admin.pelanggan')}}" aria-expanded="false">
+              <a class="sidebar-link" href="{{url('admin/pelanggan')}}" aria-expanded="false">
                 <span>
                   <i class="ti ti-article"></i>
                 </span>
