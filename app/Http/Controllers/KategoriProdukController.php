@@ -38,7 +38,7 @@ class KategoriProdukController extends Controller
         $kategori_produk = new KategoriProduk;
         $kategori_produk->nama = $request->nama;
         $kategori_produk->save();
-        return redirect('kproduk');
+        return redirect('/admin/kproduk');
     }
 
     /**
@@ -68,7 +68,7 @@ class KategoriProdukController extends Controller
         $kategori_produk = KategoriProduk::find($request->id);
         $kategori_produk->nama = $request->nama;
         $kategori_produk->save();
-        return redirect('kproduk');
+        return redirect('/admin/kproduk');
     }
 
     /**
@@ -77,6 +77,6 @@ class KategoriProdukController extends Controller
     public function destroy(string $id)
     {
         DB::table('kategori_produk')->where('id', $id)->delete();
-        return redirect('kproduk');
+        return redirect('/admin/kproduk');
     }
 }

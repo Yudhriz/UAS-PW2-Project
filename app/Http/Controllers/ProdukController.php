@@ -56,7 +56,7 @@ class ProdukController extends Controller
         $produk->stok= $request->stok;
         $produk->foto_produk= $request->foto_produk;
         $produk->save();
-        return redirect('produk');
+        return redirect('/admin/produk');
     }
 
     /**
@@ -95,7 +95,7 @@ class ProdukController extends Controller
         $produk->stok= $request->stok;
         $produk->foto_produk= $request->foto_produk;
         $produk->save();
-        return redirect('produk');
+        return redirect('/admin/produk');
 
     }
 
@@ -105,6 +105,6 @@ class ProdukController extends Controller
     public function destroy(string $id)
     {
         DB::table('produk')->where('id', $id)->delete();
-        return redirect('produk');
+        return redirect('/admin/produk');
     }
 }
