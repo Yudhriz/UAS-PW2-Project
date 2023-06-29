@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Produk;
 use App\Models\Pesanan;
-use Illuminate\support\facades\DB;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class PesananController extends Controller
@@ -44,7 +44,7 @@ class PesananController extends Controller
         $pesanan->tgl_pesanan= $request->tgl_pesanan;
         $pesanan->produk_id= $request->produk_id;
         $pesanan->save();
-        return redirect('pesanan');
+        return redirect('/admin/pesanan');
     }
 
     /**
@@ -77,7 +77,7 @@ class PesananController extends Controller
         $pesanan->tgl_pesanan= $request->tgl_pesanan;
         $pesanan->produk_id= $request->produk_id;
         $pesanan->save();
-        return redirect('pesanan');
+        return redirect('/admin/pesanan');
     }
 
     /**
@@ -86,5 +86,6 @@ class PesananController extends Controller
     public function destroy(string $id)
     {
         DB::table('pesanan')->where('id', $id)->delete();
+        return redirect('/admin/pesanan');
     }
 }

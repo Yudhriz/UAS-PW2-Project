@@ -1,46 +1,44 @@
 @extends('admin.layouts.appadmin')
 @section('content')
-<form method="POST" action="{{url('/produk/produk')}}" enctype="multipart/form-data">
+<form method="POST" action="{{url('/admin/produk/show')}}" enctype="multipart/form-data">
     {{ csrf_field() }}
+    @foreach ($produk as $p)
     <table class="table table-striped">
         <tbody>
             <tr>
-                <td>ID</td>
-                <td>id</td>
+                <td>no</td>
+                <td>{{$p->id}}</td>
             </tr>
             <tr>
-                <td>Kode</td>
-                <td>kode</td>
-            </tr>
-            <tr>
-                <td>Nama Produk</td>
                 <td>nama</td>
+                <td>{{$p->nama}}</td>
             </tr>
             <tr>
-                <td>Harga jual</td>
-                <td>harga_jual</td>
-            </tr>
-            <tr>
-                <td>Harga beli</td>
-                <td>harga_beli</td>
-            </tr>
-            <tr>
-                <td>Stok</td>
-                <td>stok</td>
-            </tr>
-            <tr>
-                <td>Min stok</td>
-                <td>min_stok</td>
+                <td>Kategori Produk id</td>
+                <td>{{$p->kategori_produk_id}}</td>
             </tr>
             <tr>
                 <td>Deskripsi</td>
-                <td>deskripsi</td>
+                <td>{{$p->deskripsi}}</td>
             </tr>
             <tr>
-                <td>Kategori produk id</td>
-                <td>kategori_produk_id</td>
+                <td>Harga</td>
+                <td>{{$p->harga}}</td>
+            </tr>
+            <tr>
+                <td>Harga Diskon</td>
+                <td>{{$p->harga_diskon}}</td>
+            </tr>
+            <tr>
+                <td>stok</td>
+                <td>{{$p->stok}}</td>
+            </tr>
+            <tr>
+                <td>Foto Produk</td>
+                <td>{{$p->foto_produk}}</td>
             </tr>
         </tbody>
     </table>
 </form>
+@endforeach
 @endsection

@@ -19,8 +19,10 @@
 <script src="{{asset('admin/assets/js/app.min.js')}}"></script>
 <script src="{{asset('admin/assets/libs/apexcharts/dist/apexcharts.min.js')}}"></script>
 <script src="{{asset('admin/assets/libs/simplebar/dist/simplebar.js')}}"></script>
-<script src="{{asset('admin/assets/js/dashboard.js')}}"></script>
-<script src="{{asset('admin/js/datatables-simple-demo.js')}}"></script>
+<script src="{{asset('admin/js/dashboard.js')}}"></script>
+<script src="{{ asset('admin/js/scripts.js') }}"></script>
+<script src="{{asset('admin/assets/js/datatables-simple-demo.js')}}"></script>
+<script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
 </body>
 
 </html>

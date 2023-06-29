@@ -6,7 +6,7 @@
               <span class="hide-menu">Home</span>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="{{url('dashboard')}}" aria-expanded="false">
+              <a class="sidebar-link" href="{{url('admin/dashboard')}}" aria-expanded="false">
                 <span>
                   <i class="ti ti-layout-dashboard"></i>
                 </span>
@@ -18,7 +18,7 @@
               <span class="hide-menu">Page</span>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="{{url('produk')}}" aria-expanded="false">
+              <a class="sidebar-link" href="{{url('admin/produk')}}" aria-expanded="false">
                 <span>
                   <i class="ti ti-article"></i>
                 </span>
@@ -26,7 +26,7 @@
               </a>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="{{url('kproduk')}}" aria-expanded="false">
+              <a class="sidebar-link" href="{{url('admin/kproduk')}}" aria-expanded="false">
                 <span>
                   <i class="ti ti-article"></i>
                 </span>
@@ -34,7 +34,7 @@
               </a>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="{{url('pesanan')}}" aria-expanded="false">
+              <a class="sidebar-link" href="{{url('admin/pesanan')}}" aria-expanded="false">
                 <span>
                   <i class="ti ti-article"></i>
                 </span>
@@ -42,7 +42,7 @@
               </a>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="{{url('pelanggan')}}" aria-expanded="false">
+              <a class="sidebar-link" href="{{url('admin/pelanggan')}}" aria-expanded="false">
                 <span>
                   <i class="ti ti-article"></i>
                 </span>
@@ -54,7 +54,7 @@
               <span class="hide-menu">AUTH</span>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="./authentication-login.html" aria-expanded="false">
+              <a class="sidebar-link" href="{{url('login')}}" aria-expanded="false">
                 <span>
                   <i class="ti ti-login"></i>
                 </span>
@@ -62,7 +62,7 @@
               </a>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="./authentication-register.html" aria-expanded="false">
+              <a class="sidebar-link" href="{{url('register')}}" aria-expanded="false">
                 <span>
                   <i class="ti ti-user-plus"></i>
                 </span>
