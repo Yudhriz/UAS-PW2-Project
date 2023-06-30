@@ -16,9 +16,9 @@
 <div class="card mb-4">
     <div class="card-header">
         <!-- <i class="fas fa-table me-1"></i> -->
-        <a class="btn btn-primary" href="{{url('produk/createKProduk')}}">Create Pelanggan</a>
+        <a class="btn btn-primary" href="{{url('/admin/produk/createKProduk')}}">Create Pelanggan</a>
     </div>
-    <div class="card-body">
+    <div class="card-body table-responsive">
         <table id="datatablesSimple">
             <thead>
                 <tr>
@@ -30,18 +30,21 @@
                 </tr>
             </thead>
             <tbody>
+            @php $no = 1; @endphp
+                @foreach($pelanggan as $pe)
                 <tr>
-                    <td>no</td>
-                    <td>nama</td>
-                    <th>Alamat</th>
-                    <th>NO HP</th>
-                    <th>Email</th>
+                    <td>{{$no++}}</td>
+                    <td>{{$pe->nama}}</td>
+                    <td>{{$pe->alamat}}</td>
+                    <td>{{$pe->no_hp}}</td>
+                    <td>{{$pe->email}}</td>
                     <td>
-                        <a class="btn btn-primary" href="{{url('/kategori_produk/show/')}}">View</a>
-                        <a class="btn btn-primary" href="{{url('/kategori_produk/edit/')}}">Edit</a>
-                        <a class="btn btn-primary" href="{{url('/kategori_produk/delete/')}}" onclick="if(!confirm('Anda Yakin Hapus Data Produk?')) {return false}">Delete</a>
+                        <a class="btn btn-primary" href="{{url('/admin/kategori_produk/show/')}}">View</a>
+                        <a class="btn btn-primary" href="{{url('/admin/kategori_produk/edit/')}}">Edit</a>
+                        <a class="btn btn-primary" href="{{url('/admin/kategori_produk/delete/')}}" onclick="if(!confirm('Anda Yakin Hapus Data Pelanggan?')) {return false}">Delete</a>
                     </td>
                 </tr>
+                @endforeach
             </tbody>
         </table>
     </div>

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\support\facades\DB;
+use Illuminate\Support\Facades\DB;
 use App\Models\KategoriProduk;
 use Illuminate\Http\Request;
 
@@ -38,7 +38,7 @@ class KategoriProdukController extends Controller
         $kategori_produk = new KategoriProduk;
         $kategori_produk->nama = $request->nama;
         $kategori_produk->save();
-        return redirect('kategori_produk');
+        return redirect('/admin/kproduk');
     }
 
     /**
@@ -63,12 +63,12 @@ class KategoriProdukController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, )
     {
         $kategori_produk = KategoriProduk::find($request->id);
         $kategori_produk->nama = $request->nama;
         $kategori_produk->save();
-        return redirect('kategori_produk');
+        return redirect('/admin/kproduk');
     }
 
     /**
@@ -77,5 +77,6 @@ class KategoriProdukController extends Controller
     public function destroy(string $id)
     {
         DB::table('kategori_produk')->where('id', $id)->delete();
+        return redirect('/admin/kproduk');
     }
 }

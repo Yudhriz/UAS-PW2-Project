@@ -17,55 +17,42 @@
 <div class="card mb-4">
     <div class="card-header">
         <!-- <i class="fas fa-table me-1"></i> -->
-        <a class="btn btn-primary" href="{{url('/produk/createproduk')}}">Tambah</a>
+        <a class="btn btn-primary" href="{{url('/admin/produk/createproduk')}}">Tambah</a>
     </div>
-    <div class="card-body">
+    <div class="card-body table-responsive">
         <table id="datatablesSimple">
             <thead>
                 <tr>
                     <th>No</th>
-                    <th>Kode</th>
-                    <th>Nama</th>
-                    <th>Harga Jual</th>
-                    <th>Harga Beli</th>
+                    <th>nama</th>
+                    <th>Kategori Produk id</th>
+                    <th>Deskripsi</th>
+                    <th>Harga</th>
+                    <th>Harga Diskon</th>
                     <th>Stok</th>
-                    <th>Minimal Stok</th>
-                    <th>Deskripi</th>
-                    <th>Kategori Produk</th>
+                    <th>Foto Produk</th>
                     <th>Action</th>
                 </tr>
             </thead>
-            <tfoot>
-                <tr>
-                    <th>No</th>
-                    <th>Kode</th>
-                    <th>Nama</th>
-                    <th>Harga Jual</th>
-                    <th>Harga Beli</th>
-                    <th>Stok</th>
-                    <th>Minimal Stok</th>
-                    <th>Deskripsi</th>
-                    <th>Kategori Produk</th>
-                    <th>Action</th>
-                </tr>
-            </tfoot>
             <tbody>
+                @php $no = 1; @endphp
+                @foreach($produk as $p)
                 <tr>
-                    <td>no</td>
-                    <td>kode</td>
-                    <td>nama</td>
-                    <td>harga_jual</td>
-                    <td>harga_beli</td>
-                    <td>stok</td>
-                    <td>min_stok</td>
-                    <td>deskripsi</td>
-                    <td>kategori_produk_id</td>
+                    <td>{{$no++}}</td>
+                    <td>{{$p->nama}}</td>
+                    <td>{{$p->kategori_produk_id}}</td>
+                    <td>{{$p->deskripsi}}</td>
+                    <td>{{$p->harga}}</td>
+                    <td>{{$p->harga_diskon}}</td>
+                    <td>{{$p->stok}}</td>
+                    <td>{{$p->foto_produk}}</td>
                     <td>
-                        <a class="btn btn-primary" href="{{url('/produk/viewproduk/')}}">View</a>
-                        <a class="btn btn-primary" href="{{url('/produk/editproduk/')}}">Edit</a>
-                        <a class="btn btn-primary" href="{{url('/produk/delete/')}}" onclick="if(!confirm('Anda Yakin Hapus Data Produk?')) {return false}">Delete</a>
+                        <a class="btn btn-primary" href="{{url('/admin/produk/viewproduk/'.$p->id)}}">View</a>
+                        <a class="btn btn-primary" href="{{url('/admin/produk/editproduk/'.$p->id)}}">Edit</a>
+                        <a class="btn btn-primary" href="{{url('/admin/produk/delete/'.$p->id)}}" onclick="if(!confirm('Anda Yakin Hapus Data Produk?')) {return false}">Delete</a>
                     </td>
                 </tr>
+                @endforeach
             </tbody>
         </table>
     </div>
