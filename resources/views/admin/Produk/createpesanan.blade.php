@@ -17,8 +17,8 @@
       <label for="select" class="col-4 col-form-label">Pelanggan ID</label>
       <div class="col-8">
         <select id="select" name="produk_id" class="custom-select">
-          @foreach ($kategori_produk as $d)
-          <option value="{{$d->id}}">{{$d->nama}}</option>
+          @foreach ($pelanggan as $p)
+          <option value="{{$p->id}}">{{$p->nama}}</option>
           @endforeach
         </select>
       </div>
@@ -33,7 +33,7 @@
       <label for="select" class="col-4 col-form-label">Produk ID</label>
       <div class="col-8">
         <select id="select" name="produk_id" class="custom-select">
-          @foreach ($kategori_produk as $d)
+          @foreach ($produk as $d)
           <option value="{{$d->id}}">{{$d->nama}}</option>
           @endforeach
         </select>
