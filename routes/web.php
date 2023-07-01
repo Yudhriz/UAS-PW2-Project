@@ -63,6 +63,12 @@ Route::get('/pesanan/editpesanan/{id}', [PesananController::class, 'edit'])->nam
 
 //Admin pelanggan
 Route::get('/pelanggan',[PelangganController::class, 'index']);
+Route::post('/pelanggan/store',[PelangganController::class, 'store']);
+Route::post('/pelanggan/update', [PelangganController::class, 'update']);
+Route::get('/pelanggan/delete/{id}', [PelangganController::class, 'destroy']);
+Route::get('/pelanggan/viewpelanggan/{id}', [PelangganController::class, 'show'])->name('show');
+Route::get('/pelanggan/createpelanggan', [PelangganController::class, 'create'])->name('create');
+Route::get('/pelanggan/editpelanggan/{id}', [PelangganController::class, 'edit'])->name('edit');
     });
 });
 

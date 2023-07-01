@@ -18,4 +18,9 @@ class Pesanan extends Model
     public function produk(){
         return $this->hasMany(Produk::class);
     }
+
+    public function pelanggan()
+    {
+        return $this->belongsTo(Pelanggan::class);
+    }
 }
