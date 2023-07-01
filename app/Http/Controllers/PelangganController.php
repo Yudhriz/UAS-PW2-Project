@@ -1,7 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Pelanggan;
+use App\Models\Produk;
+use App\Models\Pesanan;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class PelangganController extends Controller
@@ -11,7 +14,14 @@ class PelangganController extends Controller
      */
     public function index()
     {
-        return view('admin.produk.pelanggan');
+        $produk = Produk::all();
+        $pesanan = Pesanan::all();
+        $pelanggan = DB::table('pelanggan')
+        ->join('pesanan', 'pelanggan.id', '=', 'pesanan.pelanggan_id')
+        ->join('produk', 'pesanan.produk_id', '=', 'produk.id')
+        ->select('pelanggan.nama','pelanggan.alamat','pelanggan.no_hp','pelanggan.email', 'produk.nama AS nama_produk', 'pesanan.tgl_pesanan')
+        ->get();
+        return view('admin.produk.pelanggan',compact('pelanggan', 'pesanan', 'produk'));
     }
 
     /**
@@ -19,7 +29,9 @@ class PelangganController extends Controller
      */
     public function create()
     {
-        //
+        $pelanggan = DB::table('pelanggan')->get();
+        return view('admin.produk.createpelanggan', compact('pelanggan'));
+
     }
 
     /**
@@ -27,7 +39,14 @@ class PelangganController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $pelanggan = new Pelanggan;
+        $pelanggan->nama= $request->nama;
+        $pelanggan->alamat= $request->alamat;
+        $pelanggan->no_hp= $request->no_hp;
+        $pelanggan->email= $request->email;
+        $pelanggan->save();
+        return redirect('/admin/pelanggan');
+
     }
 
     /**
@@ -35,7 +54,8 @@ class PelangganController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $pelanggan = DB::table('pelanggan')->where('id', $id)->get();
+        return view('admin.produk.viewpelanggan', compact('pelanggan'));
     }
 
     /**
@@ -43,7 +63,10 @@ class PelangganController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $pelanggan = DB::table('pelanggan')->where('id', $id)->get();
+        return view('admin.produk.editpelanggan', compact(
+            'pelanggan'
+        ));
     }
 
     /**
@@ -51,7 +74,13 @@ class PelangganController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $pelanggan = Pelanggan::find($request->id);
+        $pelanggan->nama= $request->nama;
+        $pelanggan->alamat= $request->alamat;
+        $pelanggan->no_hp= $request->no_hp;
+        $pelanggan->email= $request->email;
+        $pelanggan->save();
+        return redirect('/admin/pelanggan');
     }
 
     /**
@@ -59,6 +88,7 @@ class PelangganController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        DB::table('pelanggan')->where('id', $id)->delete();
+        return redirect('/admin/pelanggan');
     }
 }
