@@ -16,11 +16,11 @@ class Pelanggan extends Model
         'no_hp',
         'email',
     ];
-    // Relasi One-to-Many dengan Model Produk
-    public function produk()
-    {
-        return $this->hasMany(Produk::class);
-    }
+    // // Relasi One-to-Many dengan Model Produk
+    // public function produk()
+    // {
+    //     return $this->hasMany(Produk::class);
+    // }
     // Relasi One-to-Many dengan Model Pesanan
     public function pesanan()
     {

@@ -14,14 +14,12 @@ class PelangganController extends Controller
      */
     public function index()
     {
-        $produk = Produk::all();
-        $pesanan = Pesanan::all();
+        // $produk = Produk::all();
+        // $pesanan = Pesanan::all();
         $pelanggan = DB::table('pelanggan')
-        ->join('pesanan', 'pelanggan.id', '=', 'pesanan.pelanggan_id')
-        ->join('produk', 'pesanan.produk_id', '=', 'produk.id')
-        ->select('pelanggan.nama','pelanggan.alamat','pelanggan.no_hp','pelanggan.email', 'produk.nama AS nama_produk', 'pesanan.tgl_pesanan')
+        ->select('pelanggan.*')
         ->get();
-        return view('admin.produk.pelanggan',compact('pelanggan', 'pesanan', 'produk'));
+        return view('admin.produk.pelanggan',compact('pelanggan'));
     }
 
     /**
@@ -72,7 +70,7 @@ class PelangganController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request)
     {
         $pelanggan = Pelanggan::find($request->id);
         $pelanggan->nama= $request->nama;

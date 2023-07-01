@@ -19,25 +19,25 @@
       <div class="form-group row">
         <label for="text" class="col-4 col-form-label">Nama</label>
         <div class="col-8">
-          <input id="text" name="nama" type="text" class="form-control">
+          <input id="text" name="nama" type="text" class="form-control" value="{{$pe->nama}}">
         </div>
       </div>
       <div class="form-group row">
         <label for="text2" class="col-4 col-form-label">Alamat</label>
         <div class="col-8">
-          <input id="text2" name="alamat" type="text" class="form-control">
+          <input id="text2" name="alamat" type="text" class="form-control" value="{{$pe->alamat}}">
         </div>
       </div>
       <div class="form-group row">
         <label for="text3" class="col-4 col-form-label">No Hp</label>
         <div class="col-8">
-          <input id="text3" name="no_hp" type="text" class="form-control">
+          <input id="text3" name="no_hp" type="text" class="form-control" value="{{$pe->no_hp}}">
         </div>
       </div>
       <div class="form-group row">
         <label for="text4" class="col-4 col-form-label">email</label>
         <div class="col-8">
-          <input id="email" name="email" type="email" class="form-control">
+          <input id="email" name="email" type="email" class="form-control" value="{{$pe->email}}">
         </div>
       </div>
       <div class="form-group row">
