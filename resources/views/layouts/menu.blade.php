@@ -14,11 +14,17 @@
 							Help & FAQs
 						</a>
 
-						<a href="#" class="flex-c-m trans-04 p-lr-25">
-							My Account
-						</a>
+                        @if (Route::has('login'))
+                            @auth
+                                <a href="{{ url('admin/dashboard') }}" class="flex-c-m trans-04 p-lr-25">My Account</a>
+                            @else
+                                <a href="{{ route('login') }}" class="flex-c-m trans-04 p-lr-25">Log in</a>
 
-						
+                                @if (Route::has('register'))
+                                    <a href="{{ route('register') }}" class="flex-c-m trans-04 p-lr-25">Register</a>
+                                @endif
+                            @endauth
+                        @endif
 					</div>
 				</div>
 			</div>
@@ -121,11 +127,17 @@
 							Help & FAQs
 						</a>
 
-						<a href="#" class="flex-c-m p-lr-10 trans-04">
-							My Account
-						</a>
+						@if (Route::has('login'))
+                            @auth
+                                <a href="{{ url('admin/dashboard') }}" class="flex-c-m trans-04 p-lr-25">My Account</a>
+                            @else
+                                <a href="{{ route('login') }}" class="flex-c-m trans-04 p-lr-25">Log in</a>
 
-						
+                                @if (Route::has('register'))
+                                    <a href="{{ route('register') }}" class="flex-c-m trans-04 p-lr-25">Register</a>
+                                @endif
+                            @endauth
+                        @endif
 					</div>
 				</li>
 			</ul>
@@ -133,11 +145,11 @@
 			<ul class="main-menu-m">
 				<li>
 					<a href="index.html">Home</a>
-					<ul class="sub-menu-m">
+					{{-- <ul class="sub-menu-m">
 						<li><a href="index.html">Homepage 1</a></li>
 						<li><a href="home-02.html">Homepage 2</a></li>
 						<li><a href="home-03.html">Homepage 3</a></li>
-					</ul>
+					</ul> --}}
 					<span class="arrow-main-menu-m">
 						<i class="fa fa-angle-right" aria-hidden="true"></i>
 					</span>
