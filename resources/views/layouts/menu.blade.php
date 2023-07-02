@@ -33,8 +33,9 @@
 				<nav class="limiter-menu-desktop container">
 
 					<!-- Logo desktop -->
-					<a href="#" class="logo">
-						<img src="{{ asset('home/images/icons/logo-01.png') }}" alt="IMG-LOGO">
+					<a href="{{ url('/') }}" class="logo">
+						<img src="{{ asset('home/images/icons/logo.png') }}" alt="IMG-LOGO">
+                        <h3 style="font-family: 'EB Garamond'; color: black;">Suntronic Store</h3>
 					</a>
 
 					<!-- Menu desktop -->
@@ -42,7 +43,7 @@
 						<ul class="main-menu">
 							<li class="active-menu">
 								<a href="index.html">Home</a>
-								
+
 							</li>
 
 							<li>
@@ -85,7 +86,10 @@
 		<div class="wrap-header-mobile">
 			<!-- Logo moblie -->
 			<div class="logo-mobile">
-				<a href="index.html"><img src="{{ asset('home/images/icons/logo-01.png') }}" alt="IMG-LOGO"></a>
+				<a href="{{ url('/') }}">
+				<img src="{{ asset('home/images/icons/logo.png') }}" alt="IMG-LOGO"></a>
+                <a href="{{ url('/') }}">
+				<h3 style="font-family: 'EB Garamond'; color: black;">Suntronic Store</h3></a>
 			</div>
 
 			<!-- Icon header -->

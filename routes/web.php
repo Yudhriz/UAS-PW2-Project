@@ -2,11 +2,17 @@
 
 use Illuminate\Support\Facades\Route;
 
+// Controller untuk Backend
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\KategoriProdukController;
 use App\Http\Controllers\PesananController;
 use App\Http\Controllers\PelangganController;
+
+// Controller untuk Frontend
+use App\Http\Controllers\SuntronicController;
+
+// Controller untuk Auth
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Auth;
 
@@ -25,9 +31,8 @@ use Illuminate\Support\Facades\Auth;
 //     return view('welcome');
 // });
 
-Route::get('/', function () {
-    return view('index');
-});
+// Frontend
+Route::get('/',[SuntronicController::class, 'index']);
 
 //Admin
 Route::group(['middleware' => ['auth']], function () {
@@ -74,4 +79,4 @@ Route::get('/pelanggan/editpelanggan/{id}', [PelangganController::class, 'edit']
 
 Auth::routes();
 
-Route::get('/home',[HomeController::class, 'index'])->name('index');
+Route::get('/admin/dashboard',[HomeController::class, 'index'])->name('index');
