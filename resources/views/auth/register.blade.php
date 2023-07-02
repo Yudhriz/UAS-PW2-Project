@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Register - Suntronic Store')
+
 @section('content')
 <body>
     <!--  Body Wrapper -->
@@ -11,9 +13,10 @@
                         <div class="card mb-0">
                             <div class="card-body">
                                 <a href="{{url('/')}}" class="text-nowrap logo-img text-center d-block py-3 w-100">
-                                    <img src="{{asset('admin/assets/images/logos/dark-logo.svg')}}" width="180" alt="">
+                                    <img src="{{asset('home/images/icons/logo.png')}}" width="60" alt="">
+                                    <h3 style="font-family: 'EB Garamond'; color: black;">Suntronic Store</h3>
                                 </a>
-                                <p class="text-center">Your Social Campaigns</p>
+                                <p class="text-center">Register Your Account</p>
                                 <form method="POST" action="{{ route('register') }}">
                                     @csrf
                                     <div class="mb-3">
