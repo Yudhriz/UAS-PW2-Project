@@ -30,7 +30,7 @@ class Pesanan extends Model
         return DB::table('pesanan')
         ->join('pelanggan', 'pesanan.pelanggan_id', '=', 'pelanggan.id')
         ->join('produk', 'pesanan.produk_id', '=', 'produk.id')
-        ->select('pesanan.*', 'produk.nama as nama_produk')
+        ->select('pesanan.*', 'produk.nama as nama_produk', 'pelanggan.nama as nama_pelanggan')
         ->get();
     }
 }
