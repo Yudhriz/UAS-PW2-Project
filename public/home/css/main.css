@@ -686,6 +686,35 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
   margin: auto;
 }
 
+.logo-mobile h3 {
+    font-family: 'EB Garamond';
+    color: black;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 10px;
+  }
+  
+  /* Media query untuk tampilan seluler dengan lebar maksimum 768px */
+  @media (max-width: 768px) {
+    .logo-mobile img {
+        display: none; /* Menyembunyikan logo pada tampilan seluler */
+      }
+    .logo-mobile h3 {
+      font-size: 16px; /* Ukuran teks untuk tampilan seluler */
+    }
+  }
+
+/* Media query untuk tampilan iPad dengan lebar maksimum 1024px */
+@media (max-width: 1024px) {
+    .logo-mobile img {
+        display: none; /* Menyembunyikan logo pada tampilan seluler */
+      }
+    .logo-mobile h3 {
+      font-size: 20px; /* Ukuran teks untuk tampilan seluler */
+    }
+  }
+
 
 
 /*------------------------------------------------------------------
