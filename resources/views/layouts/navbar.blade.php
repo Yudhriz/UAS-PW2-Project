@@ -6,7 +6,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--===============================================================================================-->
-    <link rel="icon" type="image/png" href="{{ asset('home/images/icons/favicon.png') }}" />
+    <link rel="icon" type="image/png" href="{{ asset('home/images/icons/favicon.ico') }}" />
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('home/images/icons/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('home/images/icons/favicon-32x32.png') }}">
+    <link rel="manifest" href="{{ asset('home/images/icons/site.webmanifest') }}">
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{ asset('home/vendor/bootstrap/css/bootstrap.min.css') }}">
     <!--===============================================================================================-->
@@ -16,6 +19,7 @@
         href="{{ asset('home/fonts/iconic/css/material-design-iconic-font.min.css') }}">
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{ asset('home/fonts/linearicons-v1.0.0/icon-font.min.css') }}">
+    <link href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' />
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="{{ asset('home/vendor/animate/animate.css') }}">
     <!--===============================================================================================-->
