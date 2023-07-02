@@ -11,16 +11,16 @@
 <br>
 <h1>Form Input Pesanan</h1>
 <div class="col-8 ">
-  <form method="POST" action="{{url('/admin/pesanan/store')}}" enctype="multipart/form-data">
+  <form method="POST" action="{{url('/admin/pesanan/update')}}" enctype="multipart/form-data">
     {{ csrf_field() }}
     @foreach ($pesanan as $ps)
     <input type="hidden" name="id" value="{{$ps->id}}">
     <div class="form-group row">
       <label for="select" class="col-4 col-form-label">Pelanggan ID</label>
       <div class="col-8">
-        <select id="select" name="pesanan_id" class="custom-select">
-          @foreach ($pelanggan as $d)
-          <option value="{{$d->id}}">{{$d->nama}}</option>
+        <select id="select" name="pelanggan_id" class="custom-select">
+          @foreach ($pelanggan as $p)
+          <option value="{{$p->id}}">{{$p->nama}}</option>
           @endforeach
         </select>
       </div>
@@ -35,7 +35,7 @@
       <label for="select" class="col-4 col-form-label">Produk ID</label>
       <div class="col-8">
         <select id="select" name="produk_id" class="custom-select">
-          @foreach ($kategori_produk as $d)
+          @foreach ($produk as $d)
           <option value="{{$d->id}}">{{$d->nama}}</option>
           @endforeach
         </select>

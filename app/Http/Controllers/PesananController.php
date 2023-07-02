@@ -65,9 +65,13 @@ class PesananController extends Controller
      */
     public function edit(string $id)
     {
+        $pelanggan = DB::table('pelanggan')->get();
+        $produk = DB::table('produk')->get();
         $pesanan = DB::table('pesanan')->where('id', $id)->get();
         return view('admin.produk.editpesanan', compact(
-            'pesanan'
+            'pesanan',
+            'pelanggan',
+            'produk'
         ));
     }
 
