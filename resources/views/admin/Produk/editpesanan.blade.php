@@ -18,7 +18,7 @@
     <div class="form-group row">
       <label for="select" class="col-4 col-form-label">Pelanggan ID</label>
       <div class="col-8">
-        <select id="select" name="produk_id" class="custom-select">
+        <select id="select" name="pesanan_id" class="custom-select">
           @foreach ($pelanggan as $d)
           <option value="{{$d->id}}">{{$d->nama}}</option>
           @endforeach
