@@ -32,6 +32,11 @@ class Produk extends Model
         return $this->hasMany(Pesanan::class);
     }
 
+    public function pelanggan()
+    {
+        return $this->belongsTo(Pelanggan::class);
+    }
+
     public function getAllData()
     {
         return DB::table('produk')

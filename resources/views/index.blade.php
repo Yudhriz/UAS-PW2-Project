@@ -4,19 +4,19 @@
     <section class="section-slide">
         <div class="wrap-slick1">
             <div class="slick1">
-            
+
                 <div class="item-slick1" style="background-image: url({{ asset('home/images/slide-1.jpg') }});">
                     <div class="container h-full">
                         <div class="flex-col-l-m h-full p-t-100 p-b-30 respon5">
                             <div class="layer-slick1 animated visible-false" data-appear="fadeInDown" data-delay="0">
                                 <span class="ltext-101 cl2 respon2">
-                                The most powerful Mac laptop
+                                    Women Collection 2018
                                 </span>
                             </div>
 
                             <div class="layer-slick1 animated visible-false" data-appear="fadeInUp" data-delay="800">
                                 <h2 class="ltext-201 cl2 p-t-19 p-b-43 respon1">
-                                COMPARE ALL MAC MODELS
+                                    NEW SEASON
                                 </h2>
                             </div>
 
@@ -29,19 +29,19 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="item-slick1" style="background-image: url({{ asset('home/images/slide-2.jpg') }});">
                     <div class="container h-full">
                         <div class="flex-col-l-m h-full p-t-100 p-b-30 respon5">
                             <div class="layer-slick1 animated visible-false" data-appear="rollIn" data-delay="0">
                                 <span class="ltext-101 cl2 respon2">
-                                    
+                                    Smart TV
                                 </span>
                             </div>
 
                             <div class="layer-slick1 animated visible-false" data-appear="lightSpeedIn" data-delay="800">
                                 <h2 class="ltext-201 cl2 p-t-19 p-b-43 respon1">
-                                    
+                                    NEW MACHINE
                                 </h2>
                             </div>
 
@@ -60,13 +60,13 @@
                         <div class="flex-col-l-m h-full p-t-100 p-b-30 respon5">
                             <div class="layer-slick1 animated visible-false" data-appear="rotateInDownLeft" data-delay="0">
                                 <span class="ltext-101 cl2 respon2">
-                                    UNMATCHED PERFORMANCE
+                                    Durable Refridgerator
                                 </span>
                             </div>
 
                             <div class="layer-slick1 animated visible-false" data-appear="rotateInUpRight" data-delay="800">
                                 <h2 class="ltext-201 cl2 p-t-19 p-b-43 respon1">
-                                    New arrivals
+                                    NEW PRODUK
                                 </h2>
                             </div>
 
@@ -97,11 +97,11 @@
                             class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
                             <div class="block1-txt-child1 flex-col-l">
                                 <span class="block1-name ltext-102 trans-04 p-b-8">
-                                Electronic
+                                    Electronic
                                 </span>
 
                                 <span class="block1-info stext-102 trans-04">
-                                TV
+                                    TV
                                 </span>
                             </div>
 
@@ -127,7 +127,7 @@
                                 </span>
 
                                 <span class="block1-info stext-102 trans-04">
-                                MacBook
+                                    MacBook
                                 </span>
                             </div>
 
@@ -149,11 +149,11 @@
                             class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
                             <div class="block1-txt-child1 flex-col-l">
                                 <span class="block1-name ltext-102 trans-04 p-b-8">
-                                Kulkas
+                                    Kulkas
                                 </span>
 
                                 <span class="block1-info stext-102 trans-04">
-                                Side by side series
+                                    Side by side series
                                 </span>
                             </div>
 
@@ -444,7 +444,7 @@
                         <div class="block2-txt flex-w flex-t p-t-14">
                             <div class="block2-txt-child1 flex-col-l ">
                                 <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                                LG OLED evo C2 83 inch 4K Smart TV
+                                    LG OLED evo C2 83 inch 4K Smart TV
                                 </a>
 
                                 <span class="stext-105 cl3">
@@ -454,8 +454,8 @@
 
                             <div class="block2-txt-child2 flex-r p-t-3">
                                 <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                    <img class="icon-heart1 dis-block trans-04" src="{{ asset('home/images/icons/icon-heart-01.png') }}"
-                                        alt="ICON">
+                                    <img class="icon-heart1 dis-block trans-04"
+                                        src="{{ asset('home/images/icons/icon-heart-01.png') }}" alt="ICON">
                                     <img class="icon-heart2 dis-block trans-04 ab-t-l"
                                         src="{{ asset('home/images/icons/icon-heart-02.png') }}" alt="ICON">
                                 </a>
@@ -479,18 +479,18 @@
                         <div class="block2-txt flex-w flex-t p-t-14">
                             <div class="block2-txt-child1 flex-col-l ">
                                 <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                                LG LQ57 32 inch Smart TV
+                                    LG LQ57 32 inch Smart TV
                                 </a>
 
                                 <span class="stext-105 cl3">
-                                Rp3.199.000
+                                    Rp3.199.000
                                 </span>
                             </div>
 
                             <div class="block2-txt-child2 flex-r p-t-3">
                                 <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                    <img class="icon-heart1 dis-block trans-04" src="{{ asset('home/images/icons/icon-heart-01.png') }}"
-                                        alt="ICON">
+                                    <img class="icon-heart1 dis-block trans-04"
+                                        src="{{ asset('home/images/icons/icon-heart-01.png') }}" alt="ICON">
                                     <img class="icon-heart2 dis-block trans-04 ab-t-l"
                                         src="{{ asset('home/images/icons/icon-heart-02.png') }}" alt="ICON">
                                 </a>
@@ -524,8 +524,8 @@
 
                             <div class="block2-txt-child2 flex-r p-t-3">
                                 <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                    <img class="icon-heart1 dis-block trans-04" src="{{ asset('home/images/icons/icon-heart-01.png') }}"
-                                        alt="ICON">
+                                    <img class="icon-heart1 dis-block trans-04"
+                                        src="{{ asset('home/images/icons/icon-heart-01.png') }}" alt="ICON">
                                     <img class="icon-heart2 dis-block trans-04 ab-t-l"
                                         src="{{ asset('home/images/icons/icon-heart-02.png') }}" alt="ICON">
                                 </a>
@@ -559,8 +559,8 @@
 
                             <div class="block2-txt-child2 flex-r p-t-3">
                                 <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                    <img class="icon-heart1 dis-block trans-04" src="{{ asset('home/images/icons/icon-heart-01.png') }}"
-                                        alt="ICON">
+                                    <img class="icon-heart1 dis-block trans-04"
+                                        src="{{ asset('home/images/icons/icon-heart-01.png') }}" alt="ICON">
                                     <img class="icon-heart2 dis-block trans-04 ab-t-l"
                                         src="{{ asset('home/images/icons/icon-heart-02.png') }}" alt="ICON">
                                 </a>
@@ -594,8 +594,8 @@
 
                             <div class="block2-txt-child2 flex-r p-t-3">
                                 <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                    <img class="icon-heart1 dis-block trans-04" src="{{ asset('home/images/icons/icon-heart-01.png') }}"
-                                        alt="ICON">
+                                    <img class="icon-heart1 dis-block trans-04"
+                                        src="{{ asset('home/images/icons/icon-heart-01.png') }}" alt="ICON">
                                     <img class="icon-heart2 dis-block trans-04 ab-t-l"
                                         src="{{ asset('home/images/icons/icon-heart-02.png') }}" alt="ICON">
                                 </a>
@@ -629,8 +629,8 @@
 
                             <div class="block2-txt-child2 flex-r p-t-3">
                                 <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                    <img class="icon-heart1 dis-block trans-04" src="{{ asset('home/images/icons/icon-heart-01.png') }}"
-                                        alt="ICON">
+                                    <img class="icon-heart1 dis-block trans-04"
+                                        src="{{ asset('home/images/icons/icon-heart-01.png') }}" alt="ICON">
                                     <img class="icon-heart2 dis-block trans-04 ab-t-l"
                                         src="{{ asset('home/images/icons/icon-heart-02.png') }}" alt="ICON">
                                 </a>
@@ -664,8 +664,8 @@
 
                             <div class="block2-txt-child2 flex-r p-t-3">
                                 <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                    <img class="icon-heart1 dis-block trans-04" src="{{ asset('home/images/icons/icon-heart-01.png') }}"
-                                        alt="ICON">
+                                    <img class="icon-heart1 dis-block trans-04"
+                                        src="{{ asset('home/images/icons/icon-heart-01.png') }}" alt="ICON">
                                     <img class="icon-heart2 dis-block trans-04 ab-t-l"
                                         src="{{ asset('home/images/icons/icon-heart-02.png') }}" alt="ICON">
                                 </a>
@@ -699,8 +699,8 @@
 
                             <div class="block2-txt-child2 flex-r p-t-3">
                                 <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                    <img class="icon-heart1 dis-block trans-04" src="{{ asset('home/images/icons/icon-heart-01.png') }}"
-                                        alt="ICON">
+                                    <img class="icon-heart1 dis-block trans-04"
+                                        src="{{ asset('home/images/icons/icon-heart-01.png') }}" alt="ICON">
                                     <img class="icon-heart2 dis-block trans-04 ab-t-l"
                                         src="{{ asset('home/images/icons/icon-heart-02.png') }}" alt="ICON">
                                 </a>
@@ -734,8 +734,8 @@
 
                             <div class="block2-txt-child2 flex-r p-t-3">
                                 <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                    <img class="icon-heart1 dis-block trans-04" src="{{ asset('home/images/icons/icon-heart-01.png') }}"
-                                        alt="ICON">
+                                    <img class="icon-heart1 dis-block trans-04"
+                                        src="{{ asset('home/images/icons/icon-heart-01.png') }}" alt="ICON">
                                     <img class="icon-heart2 dis-block trans-04 ab-t-l"
                                         src="{{ asset('home/images/icons/icon-heart-02.png') }}" alt="ICON">
                                 </a>
@@ -769,8 +769,8 @@
 
                             <div class="block2-txt-child2 flex-r p-t-3">
                                 <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                    <img class="icon-heart1 dis-block trans-04" src="{{ asset('home/images/icons/icon-heart-01.png') }}"
-                                        alt="ICON">
+                                    <img class="icon-heart1 dis-block trans-04"
+                                        src="{{ asset('home/images/icons/icon-heart-01.png') }}" alt="ICON">
                                     <img class="icon-heart2 dis-block trans-04 ab-t-l"
                                         src="{{ asset('home/images/icons/icon-heart-02.png') }}" alt="ICON">
                                 </a>
@@ -804,8 +804,8 @@
 
                             <div class="block2-txt-child2 flex-r p-t-3">
                                 <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                    <img class="icon-heart1 dis-block trans-04" src="{{ asset('home/images/icons/icon-heart-01.png') }}"
-                                        alt="ICON">
+                                    <img class="icon-heart1 dis-block trans-04"
+                                        src="{{ asset('home/images/icons/icon-heart-01.png') }}" alt="ICON">
                                     <img class="icon-heart2 dis-block trans-04 ab-t-l"
                                         src="{{ asset('home/images/icons/icon-heart-02.png') }}" alt="ICON">
                                 </a>
@@ -839,8 +839,8 @@
 
                             <div class="block2-txt-child2 flex-r p-t-3">
                                 <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                    <img class="icon-heart1 dis-block trans-04" src="{{ asset('home/images/icons/icon-heart-01.png') }}"
-                                        alt="ICON">
+                                    <img class="icon-heart1 dis-block trans-04"
+                                        src="{{ asset('home/images/icons/icon-heart-01.png') }}" alt="ICON">
                                     <img class="icon-heart2 dis-block trans-04 ab-t-l"
                                         src="{{ asset('home/images/icons/icon-heart-02.png') }}" alt="ICON">
                                 </a>
@@ -874,8 +874,8 @@
 
                             <div class="block2-txt-child2 flex-r p-t-3">
                                 <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                    <img class="icon-heart1 dis-block trans-04" src="{{ asset('home/images/icons/icon-heart-01.png') }}"
-                                        alt="ICON">
+                                    <img class="icon-heart1 dis-block trans-04"
+                                        src="{{ asset('home/images/icons/icon-heart-01.png') }}" alt="ICON">
                                     <img class="icon-heart2 dis-block trans-04 ab-t-l"
                                         src="{{ asset('home/images/icons/icon-heart-02.png') }}" alt="ICON">
                                 </a>
@@ -909,8 +909,8 @@
 
                             <div class="block2-txt-child2 flex-r p-t-3">
                                 <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                    <img class="icon-heart1 dis-block trans-04" src="{{ asset('home/images/icons/icon-heart-01.png') }}"
-                                        alt="ICON">
+                                    <img class="icon-heart1 dis-block trans-04"
+                                        src="{{ asset('home/images/icons/icon-heart-01.png') }}" alt="ICON">
                                     <img class="icon-heart2 dis-block trans-04 ab-t-l"
                                         src="{{ asset('home/images/icons/icon-heart-02.png') }}" alt="ICON">
                                 </a>
@@ -944,8 +944,8 @@
 
                             <div class="block2-txt-child2 flex-r p-t-3">
                                 <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                    <img class="icon-heart1 dis-block trans-04" src="{{ asset('home/images/icons/icon-heart-01.png') }}"
-                                        alt="ICON">
+                                    <img class="icon-heart1 dis-block trans-04"
+                                        src="{{ asset('home/images/icons/icon-heart-01.png') }}" alt="ICON">
                                     <img class="icon-heart2 dis-block trans-04 ab-t-l"
                                         src="{{ asset('home/images/icons/icon-heart-02.png') }}" alt="ICON">
                                 </a>
@@ -979,8 +979,8 @@
 
                             <div class="block2-txt-child2 flex-r p-t-3">
                                 <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                    <img class="icon-heart1 dis-block trans-04" src="{{ asset('home/images/icons/icon-heart-01.png') }}"
-                                        alt="ICON">
+                                    <img class="icon-heart1 dis-block trans-04"
+                                        src="{{ asset('home/images/icons/icon-heart-01.png') }}" alt="ICON">
                                     <img class="icon-heart2 dis-block trans-04 ab-t-l"
                                         src="{{ asset('home/images/icons/icon-heart-02.png') }}" alt="ICON">
                                 </a>

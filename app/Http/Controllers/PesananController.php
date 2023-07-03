@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Models\Pelanggan;
 use App\Models\Produk;
 use App\Models\Pesanan;
 use Illuminate\Support\Facades\DB;
@@ -14,13 +16,15 @@ class PesananController extends Controller
     public function index()
     {
         $produk = Produk::all();
+        $pelanggan = Pelanggan::all();
 
         $pesanan = DB::table('pesanan')
+            ->join('pelanggan', 'pesanan.pelanggan_id', '=', 'pelanggan.id')
             ->join('produk', 'pesanan.produk_id', '=', 'produk.id')
-            ->select('pesanan.*', 'produk.nama as nama_produk')
+            ->select('pesanan.*', 'produk.nama as nama_produk', 'pelanggan.nama as nama_pelanggan')
             ->get();
         //perintah join diatas untuk menggabungkan tabel pesanan dan produk
-        return view('admin.produk.pesanan', compact('pesanan', 'produk'));
+        return view('admin.produk.pesanan', compact('pesanan','pelanggan', 'produk'));
     }
 
     /**
@@ -28,10 +32,10 @@ class PesananController extends Controller
      */
     public function create()
     {
-        $kategori_produk = DB::table('kategori_produk')->get();
+        $pelanggan = DB::table('pelanggan')->get();
         $produk = DB::table('produk')->get();
         $pesanan = DB::table('pesanan')->get();
-        return view('admin.produk.createpesanan', compact('kategori_produk', 'produk', 'pesanan'));
+        return view('admin.produk.createpesanan', compact('pesanan', 'pelanggan', 'produk'));
     }
 
     /**
@@ -61,16 +65,20 @@ class PesananController extends Controller
      */
     public function edit(string $id)
     {
+        $pelanggan = DB::table('pelanggan')->get();
+        $produk = DB::table('produk')->get();
         $pesanan = DB::table('pesanan')->where('id', $id)->get();
         return view('admin.produk.editpesanan', compact(
-            'pesanan'
+            'pesanan',
+            'pelanggan',
+            'produk'
         ));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request)
     {
         $pesanan = Pesanan::find($request->id);
         $pesanan->pelanggan_id= $request->pelanggan_id;
