@@ -5,19 +5,18 @@
         <div class="wrap-slick1">
             <div class="slick1">
 
-                <div class="item-slick1" style="background-image: url({{asset('home/images/slide-01.jpg')}});">            
-                <div class="item-slick1" style="background-image: url({{ asset('home/images/slide-01.jpg') }});">
+                <div class="item-slick1" style="background-image: url({{ asset('home/images/slide-1.jpg') }});">
                     <div class="container h-full">
                         <div class="flex-col-l-m h-full p-t-100 p-b-30 respon5">
                             <div class="layer-slick1 animated visible-false" data-appear="fadeInDown" data-delay="0">
                                 <span class="ltext-101 cl2 respon2">
-                                    Women Collection 2018
+                                    Powerful Laptops
                                 </span>
                             </div>
 
                             <div class="layer-slick1 animated visible-false" data-appear="fadeInUp" data-delay="800">
                                 <h2 class="ltext-201 cl2 p-t-19 p-b-43 respon1">
-                                    NEW SEASON
+                                    NEW PRODUK
                                 </h2>
                             </div>
 
@@ -31,23 +30,22 @@
                     </div>
                 </div>
 
-                <div class="item-slick1" style="background-image: url({{ asset('home/images/slide-02.jpg') }});">
-                
+                <div class="item-slick1" style="background-image: url({{ asset('home/images/slide-2.jpg') }});">
                     <div class="container h-full">
                         <div class="flex-col-l-m h-full p-t-100 p-b-30 respon5">
                             <div class="layer-slick1 animated visible-false" data-appear="rollIn" data-delay="0">
                                 <span class="ltext-101 cl2 respon2">
-                                    Men New-Season
+                                    Smart TV
                                 </span>
                             </div>
 
                             <div class="layer-slick1 animated visible-false" data-appear="lightSpeedIn" data-delay="800">
                                 <h2 class="ltext-201 cl2 p-t-19 p-b-43 respon1">
-                                    Jackets & Coats
+                                    NEW MACHINE
                                 </h2>
                             </div>
 
-                            <div class="layer-slick1 animated visible-false" data-appear="slideInUp" data-delay="1600">
+                            <div class="layer-slick1 animated visible-false" data-appear="lightSpeedIn" data-delay="800">
                                 <a href="product.html"
                                     class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
                                     Shop Now
@@ -57,19 +55,18 @@
                     </div>
                 </div>
 
-                <div class="item-slick1" style="background-image: url({{ asset('home/images/slide-03.jpg') }});">
-
+                <div class="item-slick1" style="background-image: url({{ asset('home/images/slide-3.jpg') }});">
                     <div class="container h-full">
                         <div class="flex-col-l-m h-full p-t-100 p-b-30 respon5">
                             <div class="layer-slick1 animated visible-false" data-appear="rotateInDownLeft" data-delay="0">
                                 <span class="ltext-101 cl2 respon2">
-                                    Men Collection 2018
+                                    Durable Refridgerator
                                 </span>
                             </div>
 
                             <div class="layer-slick1 animated visible-false" data-appear="rotateInUpRight" data-delay="800">
                                 <h2 class="ltext-201 cl2 p-t-19 p-b-43 respon1">
-                                    New arrivals
+                                    NEW PRODUK
                                 </h2>
                             </div>
 
@@ -94,17 +91,17 @@
                 <div class="col-md-6 col-xl-4 p-b-30 m-lr-auto">
                     <!-- Block1 -->
                     <div class="block1 wrap-pic-w">
-                        <img src="{{ asset('home/images/banner-01.jpg') }}" alt="IMG-BANNER">
+                        <img src="{{ asset('home/images/benner-1.jpg') }}" alt="IMG-BANNER">
 
                         <a href="product.html"
                             class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
                             <div class="block1-txt-child1 flex-col-l">
                                 <span class="block1-name ltext-102 trans-04 p-b-8">
-                                    Women
+                                    Electronic
                                 </span>
 
                                 <span class="block1-info stext-102 trans-04">
-                                    Spring 2018
+                                    TV
                                 </span>
                             </div>
 
@@ -120,17 +117,17 @@
                 <div class="col-md-6 col-xl-4 p-b-30 m-lr-auto">
                     <!-- Block1 -->
                     <div class="block1 wrap-pic-w">
-                        <img src="{{ asset('home/images/banner-02.jpg') }}" alt="IMG-BANNER">
+                        <img src="{{ asset('home/images/benner-2.jpg') }}" alt="IMG-BANNER">
 
                         <a href="product.html"
                             class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
                             <div class="block1-txt-child1 flex-col-l">
                                 <span class="block1-name ltext-102 trans-04 p-b-8">
-                                    Men
+                                    Laptop
                                 </span>
 
                                 <span class="block1-info stext-102 trans-04">
-                                    Spring 2018
+                                    MacBook
                                 </span>
                             </div>
 
@@ -146,17 +143,17 @@
                 <div class="col-md-6 col-xl-4 p-b-30 m-lr-auto">
                     <!-- Block1 -->
                     <div class="block1 wrap-pic-w">
-                        <img src="{{ asset('home/images/banner-03.jpg') }}" alt="IMG-BANNER">
+                        <img src="{{ asset('home/images/benner-3.jpg') }}" alt="IMG-BANNER">
 
                         <a href="product.html"
                             class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
                             <div class="block1-txt-child1 flex-col-l">
                                 <span class="block1-name ltext-102 trans-04 p-b-8">
-                                    Accessories
+                                    Kulkas
                                 </span>
 
                                 <span class="block1-info stext-102 trans-04">
-                                    New Trend
+                                    Side by side series
                                 </span>
                             </div>
 
@@ -188,17 +185,20 @@
                         All Products
                     </button>
 
-                    <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".Televisi">
-                        Televisi
+                    @foreach ($kategori_produk as $k)
+                        <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5"
+                            data-filter=".{{ strtolower($k->nama) }}">
+                            {{ $k->nama }}
+                        </button>
+                    @endforeach
+
+                    {{-- <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".shoes">
+                        Shoes
                     </button>
 
-                    <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".Kulkas">
-                        Kulkas
-                    </button>
-
-                    <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".Laptop">
-                        Laptop
-                    </button>
+                    <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".watches">
+                        Watches
+                    </button> --}}
                 </div>
 
                 <div class="flex-w flex-c-m m-tb-10">
@@ -424,646 +424,128 @@
             </div>
 
             <div class="row isotope-grid">
-               
-                <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item Televisi">
-                    <!-- Block2 -->
-                    <div class="block2">
-                        <div class="block2-pic hov-img0">
-                            <img src="{{ asset('home/images/product-tv-sony.jpg') }}" alt="IMG-PRODUCT">
+                @foreach ($dataTv as $p)
+                    <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item tv">
+                        <!-- Block2 -->
+                        <div class="block2">
+                            <div class="block2-pic hov-img0">
+                                <img src="{{ asset('home/images/' . $p->foto_produk) }}" alt="IMG-PRODUCT">
 
-                            <a href="#"
-                                class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                                Quick View
-                            </a>
-                        </div>
-
-                        <div class="block2-txt flex-w flex-t p-t-14">
-                            <div class="block2-txt-child1 flex-col-l ">
-                                <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                                    Sony brand television
-                                </a>
-
-                                <span class="stext-105 cl3">
-                                    $121.00
-                                </span>
-                            </div>
-
-                            <div class="block2-txt-child2 flex-r p-t-3">
-                                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                    <img class="icon-heart1 dis-block trans-04" src="{{ asset('home/images/icons/icon-heart-01.png') }}"
-                                        alt="ICON">
-                                    <img class="icon-heart2 dis-block trans-04 ab-t-l"
-                                        src="{{ asset('home/images/icons/icon-heart-02.png') }}" alt="ICON">
+                                <a href="#"
+                                    class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
+                                    Quick View
                                 </a>
                             </div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item Televisi">
-                    <!-- Block2 -->
-                    <div class="block2">
-                        <div class="block2-pic hov-img0">
-                            <img src="{{ asset('home/images/product-sharap-tv.jpg') }}" alt="IMG-PRODUCT">
+                            <div class="block2-txt flex-w flex-t p-t-14">
+                                <div class="block2-txt-child1 flex-col-l t">
+                                    <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                                        {{ $p->nama }}
+                                    </a>
 
-                            <a href="#"
-                                class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                                Quick View
-                            </a>
-                        </div>
+                                    <span class="stext-105 cl3">
+                                        Rp {{ number_format($p->harga, 0, ',', '.') }}
+                                    </span>
+                                </div>
 
-                        <div class="block2-txt flex-w flex-t p-t-14">
-                            <div class="block2-txt-child1 flex-col-l ">
-                                <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                                    Sharap brand television
-                                </a>
-
-                                <span class="stext-105 cl3">
-                                    $13.50
-                                </span>
-                            </div>
-
-                            <div class="block2-txt-child2 flex-r p-t-3">
-                                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                    <img class="icon-heart1 dis-block trans-04" src="{{ asset('home/images/icons/icon-heart-01.png') }}"
-                                        alt="ICON">
-                                    <img class="icon-heart2 dis-block trans-04 ab-t-l"
-                                        src="{{ asset('home/images/icons/icon-heart-02.png') }}" alt="ICON">
-                                </a>
+                                <div class="block2-txt-child2 flex-r p-t-3">
+                                    <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                                        <img class="icon-heart1 dis-block trans-04"
+                                            src="{{ asset('home/images/icons/icon-heart-01.png') }}" alt="ICON">
+                                        <img class="icon-heart2 dis-block trans-04 ab-t-l"
+                                            src="{{ asset('home/images/icons/icon-heart-02.png') }}" alt="ICON">
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                @endforeach
 
-                <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item Televisi">
-                    <!-- Block2 -->
-                    <div class="block2">
-                        <div class="block2-pic hov-img0">
-                            <img src="{{ asset('home/images/product-Thosiba-TV.jpg') }}" alt="IMG-PRODUCT">
+                @foreach ($dataLaptop as $p)
+                    <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item laptop">
+                        <!-- Block2 -->
+                        <div class="block2">
+                            <div class="block2-pic hov-img0">
+                                <img src="{{ asset('home/images/' . $p->foto_produk) }}" alt="IMG-PRODUCT">
 
-                            <a href="#"
-                                class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                                Quick View
-                            </a>
-                        </div>
-
-                        <div class="block2-txt flex-w flex-t p-t-14">
-                            <div class="block2-txt-child1 flex-col-l ">
-                                <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                                    Thosiba brand television
-                                </a>
-
-                                <span class="stext-105 cl3">
-                                    $89.31
-                                </span>
-                            </div>
-
-                            <div class="block2-txt-child2 flex-r p-t-3">
-                                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                    <img class="icon-heart1 dis-block trans-04" src="{{ asset('home/images/icons/icon-heart-01.png') }}"
-                                        alt="ICON">
-                                    <img class="icon-heart2 dis-block trans-04 ab-t-l"
-                                        src="{{ asset('home/images/icons/icon-heart-02.png') }}" alt="ICON">
+                                <a href="#"
+                                    class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
+                                    Quick View
                                 </a>
                             </div>
-                        </div>
-                    </div>
-                </div>
 
-                
-                <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item televisi">
-                    <!-- Block2 -->
-                    <div class="block2">
-                        <div class="block2-pic hov-img0">
-                            <img src="{{ asset('home/images/product-tv-panasonic.jpg') }}" alt="IMG-PRODUCT">
+                            <div class="block2-txt flex-w flex-t p-t-14">
+                                <div class="block2-txt-child1 flex-col-l t">
+                                    <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                                        {{ $p->nama }}
+                                    </a>
 
-                            <a href="#"
-                                class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                                Quick View
-                            </a>
-                        </div>
+                                    <span class="stext-105 cl3">
+                                        Rp {{ number_format($p->harga, 0, ',', '.') }}
+                                    </span>
+                                </div>
 
-                        <div class="block2-txt flex-w flex-t p-t-14">
-                            <div class="block2-txt-child1 flex-col-l ">
-                                <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                                    Panasonic brand television
-                                </a>
-
-                                <span class="stext-105 cl3">
-                                    $189.31
-                                </span>
-                            </div>
-
-                            <div class="block2-txt-child2 flex-r p-t-3">
-                                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                    <img class="icon-heart1 dis-block trans-04" src="{{ asset('home/images/icons/icon-heart-01.png') }}"
-                                        alt="ICON">
-                                    <img class="icon-heart2 dis-block trans-04 ab-t-l"
-                                        src="{{ asset('home/images/icons/icon-heart-02.png') }}" alt="ICON">
-                                </a>
+                                <div class="block2-txt-child2 flex-r p-t-3">
+                                    <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                                        <img class="icon-heart1 dis-block trans-04"
+                                            src="{{ asset('home/images/icons/icon-heart-01.png') }}" alt="ICON">
+                                        <img class="icon-heart2 dis-block trans-04 ab-t-l"
+                                            src="{{ asset('home/images/icons/icon-heart-02.png') }}" alt="ICON">
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                @endforeach
 
-                
+                @foreach ($dataKulkas as $p)
+                    <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item kulkas">
+                        <!-- Block2 -->
+                        <div class="block2">
+                            <div class="block2-pic hov-img0">
+                                <img src="{{ asset('home/images/' . $p->foto_produk) }}" alt="IMG-PRODUCT">
 
-                <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item televisi">
-                    <!-- Block2 -->
-                    <div class="block2">
-                        <div class="block2-pic hov-img0">
-                            <img src="{{ asset('home/images/product-tv-PLytron.jpg') }}" alt="IMG-PRODUCT">
-
-                            <a href="#"
-                                class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                                Quick View
-                            </a>
-                        </div>
-
-                        <div class="block2-txt flex-w flex-t p-t-14">
-                            <div class="block2-txt-child1 flex-col-l ">
-                                <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                                    Plytron brand television
-                                </a>
-
-                                <span class="stext-105 cl3">
-                                    $19.31
-                                </span>
-                            </div>
-
-                            <div class="block2-txt-child2 flex-r p-t-3">
-                                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                    <img class="icon-heart1 dis-block trans-04" src="{{ asset('home/images/icons/icon-heart-01.png') }}"
-                                        alt="ICON">
-                                    <img class="icon-heart2 dis-block trans-04 ab-t-l"
-                                        src="{{ asset('home/images/icons/icon-heart-02.png') }}" alt="ICON">
+                                <a href="#"
+                                    class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
+                                    Quick View
                                 </a>
                             </div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item Televisi">
-                    <!-- Block2 -->
-                    <div class="block2">
-                        <div class="block2-pic hov-img0">
-                            <img src="{{ asset('home/images/product-tv-Samsung.jpg') }}" alt="IMG-PRODUCT">
+                            <div class="block2-txt flex-w flex-t p-t-14">
+                                <div class="block2-txt-child1 flex-col-l t">
+                                    <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                                        {{ $p->nama }}
+                                    </a>
 
-                            <a href="#"
-                                class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                                Quick View
-                            </a>
-                        </div>
+                                    <span class="stext-105 cl3">
+                                        Rp {{ number_format($p->harga, 0, ',', '.') }}
+                                    </span>
+                                </div>
 
-                        <div class="block2-txt flex-w flex-t p-t-14">
-                            <div class="block2-txt-child1 flex-col-l ">
-                                <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                                    Samsung brand television
-                                </a>
-
-                                <span class="stext-105 cl3">
-                                    $19.31
-                                </span>
-                            </div>
-
-                            <div class="block2-txt-child2 flex-r p-t-3">
-                                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                    <img class="icon-heart1 dis-block trans-04" src="{{ asset('home/images/icons/icon-heart-01.png') }}"
-                                        alt="ICON">
-                                    <img class="icon-heart2 dis-block trans-04 ab-t-l"
-                                        src="{{ asset('home/images/icons/icon-heart-02.png') }}" alt="ICON">
-                                </a>
+                                <div class="block2-txt-child2 flex-r p-t-3">
+                                    <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                                        <img class="icon-heart1 dis-block trans-04"
+                                            src="{{ asset('home/images/icons/icon-heart-01.png') }}" alt="ICON">
+                                        <img class="icon-heart2 dis-block trans-04 ab-t-l"
+                                            src="{{ asset('home/images/icons/icon-heart-02.png') }}" alt="ICON">
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item Televisi">
-                    <!-- Block2 -->
-                    <div class="block2">
-                        <div class="block2-pic hov-img0">
-                            <img src="{{ asset('home/images/product-TV-POLYTRON.jpg') }}" alt="IMG-PRODUCT">
-
-                            <a href="#"
-                                class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                                Quick View
-                            </a>
-                        </div>
-
-                        <div class="block2-txt flex-w flex-t p-t-14">
-                            <div class="block2-txt-child1 flex-col-l ">
-                                <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                                    POLYTRON brand television
-                                </a>
-
-                                <span class="stext-105 cl3">
-                                    $134.10
-                                </span>
-                            </div>
-
-                            <div class="block2-txt-child2 flex-r p-t-3">
-                                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                    <img class="icon-heart1 dis-block trans-04" src="{{ asset('home/images/icons/icon-heart-01.png') }}"
-                                        alt="ICON">
-                                    <img class="icon-heart2 dis-block trans-04 ab-t-l"
-                                        src="{{ asset('home/images/icons/icon-heart-02.png') }}" alt="ICON">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item Kulkas">
-                    <!-- Block2 -->
-                    <div class="block2">
-                        <div class="block2-pic hov-img0">
-                            <img src="{{ asset('home/images/product-kulkas-1pintu-polytron.jpg') }}" alt="IMG-PRODUCT">
-
-                            <a href="#"
-                                class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                                Quick View
-                            </a>
-                        </div>
-
-                        <div class="block2-txt flex-w flex-t p-t-14">
-                            <div class="block2-txt-child1 flex-col-l ">
-                                <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                                    Refrigerator brand polytron 1 door
-                                </a>
-
-                                <span class="stext-105 cl3">
-                                    $221.31
-                                </span>
-                            </div>
-
-                            <div class="block2-txt-child2 flex-r p-t-3">
-                                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                    <img class="icon-heart1 dis-block trans-04" src="{{ asset('home/images/icons/icon-heart-01.png') }}"
-                                        alt="ICON">
-                                    <img class="icon-heart2 dis-block trans-04 ab-t-l"
-                                        src="{{ asset('home/images/icons/icon-heart-02.png') }}" alt="ICON">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item Kulkas">
-                    <!-- Block2 -->
-                    <div class="block2">
-                        <div class="block2-pic hov-img0">
-                            <img src="{{ asset('home/images/product-kulkas-PANASONIC-2pintusilver.jpg') }}" alt="IMG-PRODUCT">
-
-                            <a href="#"
-                                class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                                Quick View
-                            </a>
-                        </div>
-
-                        <div class="block2-txt flex-w flex-t p-t-14">
-                            <div class="block2-txt-child1 flex-col-l ">
-                                <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                                    silver 2 door panasonic brand refrigerator
-                                </a>
-
-                                <span class="stext-105 cl3">
-                                    $201.00
-                                </span>
-                            </div>
-
-                            <div class="block2-txt-child2 flex-r p-t-3">
-                                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                    <img class="icon-heart1 dis-block trans-04" src="{{ asset('home/images/icons/icon-heart-01.png') }}"
-                                        alt="ICON">
-                                    <img class="icon-heart2 dis-block trans-04 ab-t-l"
-                                        src="{{ asset('home/images/icons/icon-heart-02.png') }}" alt="ICON">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item Kulkas">
-                    <!-- Block2 -->
-                    <div class="block2">
-                        <div class="block2-pic hov-img0">
-                            <img src="{{ asset('home/images/product-Kulkas-Panasonic.jpg') }}" alt="IMG-PRODUCT">
-
-                            <a href="#"
-                                class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                                Quick View
-                            </a>
-                        </div>
-
-                        <div class="block2-txt flex-w flex-t p-t-14">
-                            <div class="block2-txt-child1 flex-col-l ">
-                                <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                                    White 3 door panasonic brand refrigerator
-                                </a>
-
-                                <span class="stext-105 cl3">
-                                    $263.16
-                                </span>
-                            </div>
-
-                            <div class="block2-txt-child2 flex-r p-t-3">
-                                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                    <img class="icon-heart1 dis-block trans-04" src="{{ asset('home/images/icons/icon-heart-01.png') }}"
-                                        alt="ICON">
-                                    <img class="icon-heart2 dis-block trans-04 ab-t-l"
-                                        src="{{ asset('home/images/icons/icon-heart-02.png') }}" alt="ICON">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item Kulkas">
-                    <!-- Block2 -->
-                    <div class="block2">
-                        <div class="block2-pic hov-img0">
-                            <img src="{{ asset('home/images/product-kulkas-panasonic2pintublack.jpg') }}" alt="IMG-PRODUCT">
-
-                            <a href="#"
-                                class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                                Quick View
-                            </a>
-                        </div>
-
-                        <div class="block2-txt flex-w flex-t p-t-14">
-                            <div class="block2-txt-child1 flex-col-l ">
-                                <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                                    Black 2 door panasonic brand refrigerator
-                                </a>
-
-                                <span class="stext-105 cl3">
-                                    $255.15
-                                </span>
-                            </div>
-
-                            <div class="block2-txt-child2 flex-r p-t-3">
-                                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                    <img class="icon-heart1 dis-block trans-04" src="{{ asset('home/images/icons/icon-heart-01.png') }}"
-                                        alt="ICON">
-                                    <img class="icon-heart2 dis-block trans-04 ab-t-l"
-                                        src="{{ asset('home/images/icons/icon-heart-02.png') }}" alt="ICON">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item Kulkas">
-                    <!-- Block2 -->
-                    <div class="block2">
-                        <div class="block2-pic hov-img0">
-                            <img src="{{ asset('home/images/product-kulkas-samsung-2pintu.jpg') }}" alt="IMG-PRODUCT">
-
-                            <a href="#"
-                                class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                                Quick View
-                            </a>
-                        </div>
-
-                        <div class="block2-txt flex-w flex-t p-t-14">
-                            <div class="block2-txt-child1 flex-col-l ">
-                                <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                                    2 door Samsung brand refrigerator
-                                </a>
-
-                                <span class="stext-105 cl3">
-                                    $223.00
-                                </span>
-                            </div>
-
-                            <div class="block2-txt-child2 flex-r p-t-3">
-                                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                    <img class="icon-heart1 dis-block trans-04" src="{{ asset('home/images/icons/icon-heart-01.png') }}"
-                                        alt="ICON">
-                                    <img class="icon-heart2 dis-block trans-04 ab-t-l"
-                                        src="{{ asset('home/images/icons/icon-heart-02.png') }}" alt="ICON">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item Laptop">
-                    <!-- Block2 -->
-                    <div class="block2">
-                        <div class="block2-pic hov-img0">
-                            <img src="{{ asset('home/images/product-lenovo-8gb.jpg') }}" alt="IMG-PRODUCT">
-
-                            <a href="#"
-                                class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                                Quick View
-                            </a>
-                        </div>
-
-                        <div class="block2-txt flex-w flex-t p-t-14">
-                            <div class="block2-txt-child1 flex-col-l ">
-                                <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                                    laptop brand lenovo windows 8
-                                </a>
-
-                                <span class="stext-105 cl3">
-                                    $111.00
-                                </span>
-                            </div>
-
-                            <div class="block2-txt-child2 flex-r p-t-3">
-                                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                    <img class="icon-heart1 dis-block trans-04" src="{{ asset('home/images/icons/icon-heart-01.png') }}"
-                                        alt="ICON">
-                                    <img class="icon-heart2 dis-block trans-04 ab-t-l"
-                                        src="{{ asset('home/images/icons/icon-heart-02.png') }}" alt="ICON">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item Laptop">
-                    <!-- Block2 -->
-                    <div class="block2">
-                        <div class="block2-pic hov-img0">
-                            <img src="{{ asset('home/images/product-lenovo-silver.jpg') }}" alt="IMG-PRODUCT">
-
-                            <a href="#"
-                                class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                                Quick View
-                            </a>
-                        </div>
-
-                        <div class="block2-txt flex-w flex-t p-t-14">
-                            <div class="block2-txt-child1 flex-col-l ">
-                                <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                                    laptop brand lenovo silver
-                                </a>
-
-                                <span class="stext-105 cl3">
-                                    $192.15
-                                </span>
-                            </div>
-
-                            <div class="block2-txt-child2 flex-r p-t-3">
-                                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                    <img class="icon-heart1 dis-block trans-04" src="{{ asset('home/images/icons/icon-heart-01.png') }}"
-                                        alt="ICON">
-                                    <img class="icon-heart2 dis-block trans-04 ab-t-l"
-                                        src="{{ asset('home/images/icons/icon-heart-02.png') }}" alt="ICON">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item Laptop">
-                    <!-- Block2 -->
-                    <div class="block2">
-                        <div class="block2-pic hov-img0">
-                            <img src="{{ asset('home/images/product-laptop-asus.jpg') }}" alt="IMG-PRODUCT">
-
-                            <a href="#"
-                                class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                                Quick View
-                            </a>
-                        </div>
-
-                        <div class="block2-txt flex-w flex-t p-t-14">
-                            <div class="block2-txt-child1 flex-col-l ">
-                                <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                                    laptop brand asus black
-                                </a>
-
-                                <span class="stext-105 cl3">
-                                    $192.15
-                                </span>
-                            </div>
-
-                            <div class="block2-txt-child2 flex-r p-t-3">
-                                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                    <img class="icon-heart1 dis-block trans-04" src="{{ asset('home/images/icons/icon-heart-01.png') }}"
-                                        alt="ICON">
-                                    <img class="icon-heart2 dis-block trans-04 ab-t-l"
-                                        src="{{ asset('home/images/icons/icon-heart-02.png') }}" alt="ICON">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item Laptop">
-                    <!-- Block2 -->
-                    <div class="block2">
-                        <div class="block2-pic hov-img0">
-                            <img src="{{ asset('home/images/product-laptop-asus-gameing.jpg') }}" alt="IMG-PRODUCT">
-
-                            <a href="#"
-                                class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                                Quick View
-                            </a>
-                        </div>
-
-                        <div class="block2-txt flex-w flex-t p-t-14">
-                            <div class="block2-txt-child1 flex-col-l ">
-                                <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                                    laptop brand asus gameing
-                                </a>
-
-                                <span class="stext-105 cl3">
-                                    $202.00
-                                </span>
-                            </div>
-
-                            <div class="block2-txt-child2 flex-r p-t-3">
-                                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                    <img class="icon-heart1 dis-block trans-04" src="{{ asset('home/images/icons/icon-heart-01.png') }}"
-                                        alt="ICON">
-                                    <img class="icon-heart2 dis-block trans-04 ab-t-l"
-                                        src="{{ asset('home/images/icons/icon-heart-02.png') }}" alt="ICON">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item Leptop">
-                    <!-- Block2 -->
-                    <div class="block2">
-                        <div class="block2-pic hov-img0">
-                            <img src="{{ asset('home/images/product-laptop-hp.jpg') }}" alt="IMG-PRODUCT">
-
-                            <a href="#"
-                                class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                                Quick View
-                            </a>
-                        </div>
-
-                        <div class="block2-txt flex-w flex-t p-t-14">
-                            <div class="block2-txt-child1 flex-col-l ">
-                                <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                                    laptop brand hp
-                                </a>
-
-                                <span class="stext-105 cl3">
-                                    $186.85
-                                </span>
-                            </div>
-
-                            <div class="block2-txt-child2 flex-r p-t-3">
-                                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                    <img class="icon-heart1 dis-block trans-04" src="{{ asset('home/images/icons/icon-heart-01.png') }}"
-                                        alt="ICON">
-                                    <img class="icon-heart2 dis-block trans-04 ab-t-l"
-                                        src="{{ asset('home/images/icons/icon-heart-02.png') }}" alt="ICON">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item Laptop">
-                    <!-- Block2 -->
-                    <div class="block2">
-                        <div class="block2-pic hov-img0">
-                            <img src="{{ asset('home/images/product-laptop-gameing.jpg') }}" alt="IMG-PRODUCT">
-
-                            <a href="#"
-                                class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                                Quick View
-                            </a>
-                        </div>
-
-                        <div class="block2-txt flex-w flex-t p-t-14">
-                            <div class="block2-txt-child1 flex-col-l ">
-                                <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                                    laptop brand hp gameing
-                                </a>
-
-                                <span class="stext-105 cl3">
-                                    $129.64
-                                </span>
-                            </div>
-
-                            <div class="block2-txt-child2 flex-r p-t-3">
-                                <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                    <img class="icon-heart1 dis-block trans-04" src="{{ asset('home/images/icons/icon-heart-01.png') }}"
-                                        alt="ICON">
-                                    <img class="icon-heart2 dis-block trans-04 ab-t-l"
-                                        src="{{ asset('home/images/icons/icon-heart-02.png') }}" alt="ICON">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
+
+            {{ $produk->links() }}
 
             <!-- Load more -->
             <div class="flex-c-m flex-w w-full p-t-45">
-                <a href="#" class="flex-c-m stext-101 cl5 size-103 bg2 bor1 hov-btn1 p-lr-15 trans-04">
-                    Load More
-                </a>
+                @if ($produk->hasMorePages())
+                    <a href="{{ $produk->nextPageUrl() }}"
+                        class="flex-c-m stext-101 cl5 size-103 bg2 bor1 hov-btn1 p-lr-15 trans-04">
+                        Load More
+                    </a>
+                @endif
             </div>
         </div>
     </section>

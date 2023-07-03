@@ -10,21 +10,23 @@
                  <ul>
                      <li class="p-b-10">
                          <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-                             Room
+                             TV
                          </a>
                      </li>
 
                      <li class="p-b-10">
                          <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-                             Kitchen
+                             Laptop
                          </a>
                      </li>
 
                      <li class="p-b-10">
                          <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-                             Watches
+                             Kulkas
                          </a>
                      </li>
+
+                     
                  </ul>
              </div>
 
@@ -34,11 +36,6 @@
                  </h4>
 
                  <ul>
-                     <li class="p-b-10">
-                         <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-                             Track Order
-                         </a>
-                     </li>
 
                      <li class="p-b-10">
                          <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
@@ -66,8 +63,7 @@
                  </h4>
 
                  <p class="stext-107 cl7 size-201">
-                     Any questions? Let us know in store at Jakarta, Gang Mawar 321, Indonesia, Jkt48 or call us on
-                     (+62) 081 716 6879
+                 Any questions? Let us know in store at 2th floor, Pahlawan St, Bogor or call us on (+62) 896716 6879
                  </p>
 
                  <div class="p-t-27">
@@ -93,7 +89,7 @@
                  <form>
                      <div class="wrap-input1 w-full p-b-4">
                          <input class="input1 bg-none plh1 stext-107 cl7" type="text" name="email"
-                             placeholder="email@example.com">
+                             placeholder="email@sunElecto.com">
                          <div class="focus-input1 trans-04"></div>
                      </div>
 
@@ -134,8 +130,7 @@
                  Copyright &copy;
                  <script>
                      document.write(new Date().getFullYear());
-                 </script> All rights reserved | Made with <i class="fa fa-heart-o"
-                     aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> &amp;
+                 </script> All rights reserved | Made with <b>Suntronic Store</b> by <a href="https://colorlib.com" target="_blank">Colorlib</a> &amp;
                  distributed by <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
                  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 

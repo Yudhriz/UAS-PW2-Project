@@ -6,7 +6,7 @@
 			<div class="top-bar">
 				<div class="content-topbar flex-sb-m h-full container">
 					<div class="left-top-bar">
-						Free shipping for standard order over $100
+						Happy shopping
 					</div>
 
 					<div class="right-top-bar flex-w h-full">
@@ -14,17 +14,17 @@
 							Help & FAQs
 						</a>
 
-						<a href="#" class="flex-c-m trans-04 p-lr-25">
-							My Account
-						</a>
+                        @if (Route::has('login'))
+                            @auth
+                                <a href="{{ url('admin/dashboard') }}" class="flex-c-m trans-04 p-lr-25">My Account</a>
+                            @else
+                                <a href="{{ route('login') }}" class="flex-c-m trans-04 p-lr-25">Log in</a>
 
-						<a href="#" class="flex-c-m trans-04 p-lr-25">
-							EN
-						</a>
-
-						<a href="#" class="flex-c-m trans-04 p-lr-25">
-							USD
-						</a>
+                                @if (Route::has('register'))
+                                    <a href="{{ route('register') }}" class="flex-c-m trans-04 p-lr-25">Register</a>
+                                @endif
+                            @endauth
+                        @endif
 					</div>
 				</div>
 			</div>
@@ -33,8 +33,9 @@
 				<nav class="limiter-menu-desktop container">
 
 					<!-- Logo desktop -->
-					<a href="#" class="logo">
-						<img src="{{ asset('home/images/icons/bgnavbar.png') }}" alt="IMG-LOGO">
+					<a href="{{ url('/') }}" class="logo">
+						<img src="{{ asset('home/images/icons/logo.png') }}" alt="IMG-LOGO">
+                        <h3 style="font-family: 'EB Garamond'; color: black;">Suntronic Store</h3>
 					</a>
 
 					<!-- Menu desktop -->
@@ -42,23 +43,15 @@
 						<ul class="main-menu">
 							<li class="active-menu">
 								<a href="index.html">Home</a>
-								<ul class="sub-menu">
-									<li><a href="index.html">Homepage 1</a></li>
-									<li><a href="home-02.html">Homepage 2</a></li>
-									<li><a href="home-03.html">Homepage 3</a></li>
-								</ul>
+
 							</li>
 
 							<li>
-								<a href="product.html">Shop</a>
+								<a href="{{ $produk->nextPageUrl() }}">Shop</a>
 							</li>
 
 							<li class="label1" data-label1="hot">
 								<a href="shoping-cart.html">Features</a>
-							</li>
-
-							<li>
-								<a href="blog.html">Blog</a>
 							</li>
 
 							<li>
@@ -93,7 +86,10 @@
 		<div class="wrap-header-mobile">
 			<!-- Logo moblie -->
 			<div class="logo-mobile">
-				<a href="index.html"><img src="{{ asset('home/images/icons/logo-01.png') }}" alt="IMG-LOGO"></a>
+				<a href="{{ url('/') }}">
+				<img src="{{ asset('home/images/icons/logo.png') }}" alt="IMG-LOGO"></a>
+                <a href="{{ url('/') }}">
+				<h3 style="font-family: 'EB Garamond'; color: black;">Suntronic Store</h3></a>
 			</div>
 
 			<!-- Icon header -->
@@ -125,7 +121,7 @@
 			<ul class="topbar-mobile">
 				<li>
 					<div class="left-top-bar">
-						Free shipping for standard order over $100
+						Happy shopping
 					</div>
 				</li>
 
@@ -135,17 +131,17 @@
 							Help & FAQs
 						</a>
 
-						<a href="#" class="flex-c-m p-lr-10 trans-04">
-							My Account
-						</a>
+						@if (Route::has('login'))
+                            @auth
+                                <a href="{{ url('admin/dashboard') }}" class="flex-c-m trans-04 p-lr-25">My Account</a>
+                            @else
+                                <a href="{{ route('login') }}" class="flex-c-m trans-04 p-lr-25">Log in</a>
 
-						<a href="#" class="flex-c-m p-lr-10 trans-04">
-							EN
-						</a>
-
-						<a href="#" class="flex-c-m p-lr-10 trans-04">
-							USD
-						</a>
+                                @if (Route::has('register'))
+                                    <a href="{{ route('register') }}" class="flex-c-m trans-04 p-lr-25">Register</a>
+                                @endif
+                            @endauth
+                        @endif
 					</div>
 				</li>
 			</ul>
@@ -153,26 +149,22 @@
 			<ul class="main-menu-m">
 				<li>
 					<a href="index.html">Home</a>
-					<ul class="sub-menu-m">
+					{{-- <ul class="sub-menu-m">
 						<li><a href="index.html">Homepage 1</a></li>
 						<li><a href="home-02.html">Homepage 2</a></li>
 						<li><a href="home-03.html">Homepage 3</a></li>
-					</ul>
+					</ul> --}}
 					<span class="arrow-main-menu-m">
 						<i class="fa fa-angle-right" aria-hidden="true"></i>
 					</span>
 				</li>
 
 				<li>
-					<a href="product.html">Shop</a>
+					<a href="{{ $produk->nextPageUrl() }}">Shop</a>
 				</li>
 
 				<li>
 					<a href="shoping-cart.html" class="label1 rs1" data-label1="hot">Features</a>
-				</li>
-
-				<li>
-					<a href="blog.html">Blog</a>
 				</li>
 
 				<li>
