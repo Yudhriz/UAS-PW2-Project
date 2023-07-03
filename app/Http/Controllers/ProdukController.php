@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\KategoriProduk;
 use App\Models\Produk;
 use App\Models\Pesanan;
-use Illuminate\support\facades\DB;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class ProdukController extends Controller
@@ -39,7 +39,7 @@ class ProdukController extends Controller
     {
         $kategori_produk = DB::table('kategori_produk')->get();
         $produk = DB::table('produk')->get();
-        return view('admin.produk.createproduk', compact('kproduk', 'produk'));
+        return view('admin.produk.createproduk', compact('kategori_produk', 'produk'));
     }
 
     /**
@@ -56,7 +56,7 @@ class ProdukController extends Controller
         $produk->stok= $request->stok;
         $produk->foto_produk= $request->foto_produk;
         $produk->save();
-        return redirect('produk');
+        return redirect('/admin/produk');
     }
 
     /**
@@ -95,7 +95,7 @@ class ProdukController extends Controller
         $produk->stok= $request->stok;
         $produk->foto_produk= $request->foto_produk;
         $produk->save();
-        return redirect('produk');
+        return redirect('/admin/produk');
 
     }
 
@@ -105,5 +105,6 @@ class ProdukController extends Controller
     public function destroy(string $id)
     {
         DB::table('produk')->where('id', $id)->delete();
+        return redirect('/admin/produk');
     }
 }
