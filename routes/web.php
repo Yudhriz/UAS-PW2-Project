@@ -32,11 +32,11 @@ use Illuminate\Support\Facades\Auth;
 // });
 
 // Frontend
-Route::get('/',[SuntronicController::class, 'index']);
+Route::get('/',[SuntronicController::class, 'index']); 
 
 //Admin
 Route::group(['middleware' => ['auth']], function () {
-    Route::prefix('admin')->name('admin.')->group(function () {
+Route::prefix('admin')->name('admin.')->group(function () {
 
 //Admin produk
 Route::get('/dashboard',[DashboardController::class, 'index']);
