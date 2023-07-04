@@ -32,7 +32,7 @@ use Illuminate\Support\Facades\Auth;
 // });
 
 // Frontend
-Route::get('/', [SuntronicController::class, 'index']);
+Route::get('/',[SuntronicController::class, 'index']);
 
 //about
 Route::get("/about", function () {

@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\support\facades\DB;
+use Illuminate\Support\Facades\DB;
 
 class Produk extends Model
 {
@@ -48,5 +48,33 @@ class Produk extends Model
             )
             ->select('produk.*', 'kategori_produk.nama as nama')
             ->get();
+    }
+
+    public function dataProdukTV()
+    {
+        return DB::table($this->table)
+            ->where('kategori_produk_id', 1)
+            ->get();
+    }
+
+    public function dataProdukLaptop()
+    {
+        return DB::table($this->table)
+            ->where('kategori_produk_id', 2)
+            ->get();
+    }
+
+    public function dataProdukKulkas()
+    {
+        return DB::table($this->table)
+            ->where('kategori_produk_id', 3)
+            ->get();
+    }
+
+    public function dataProdukID($id)
+    {
+        return DB::table($this->table)
+            ->where('id', $id)
+            ->first();
     }
 }
