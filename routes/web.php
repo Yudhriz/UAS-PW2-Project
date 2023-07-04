@@ -33,7 +33,7 @@ use Illuminate\Support\Facades\Auth;
 
 // Frontend
 Route::get('/',[SuntronicController::class, 'index']);
-Route::get('/products', [SuntronicController::class, 'index'])->name('products.index');
+Route::get('/products', [SuntronicController::class, 'loadMore'])->name('products.loadMore');
 
 //Admin
 Route::group(['middleware' => ['auth']], function () {

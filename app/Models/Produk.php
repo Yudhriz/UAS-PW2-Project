@@ -52,23 +52,17 @@ class Produk extends Model
 
     public function dataProdukTV()
     {
-        return DB::table($this->table)
-            ->where('kategori_produk_id', 1)
-            ->get();
+        return $this->where('kategori_produk_id', 1)->get();
     }
 
     public function dataProdukLaptop()
     {
-        return DB::table($this->table)
-            ->where('kategori_produk_id', 2)
-            ->get();
+        return $this->where('kategori_produk_id', 2)->get();
     }
 
     public function dataProdukKulkas()
     {
-        return DB::table($this->table)
-            ->where('kategori_produk_id', 3)
-            ->get();
+        return $this->where('kategori_produk_id', 3)->get();
     }
 
     public function dataProdukID($id)
