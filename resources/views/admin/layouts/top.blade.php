@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Suntrinic Store</title>
+  <title>Suntronic Store</title>
   <link rel="shortcut icon" type="image/png" href="{{ asset('home/images/icons/logo.png') }}" />
   <link rel="stylesheet" href="{{asset('admin/assets/css/styles.min.css')}}" />
   <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
