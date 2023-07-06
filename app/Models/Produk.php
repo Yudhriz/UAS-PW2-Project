@@ -50,25 +50,23 @@ class Produk extends Model
             ->get();
     }
 
-    public function dataProdukTV()
+    public static function dataProdukTV()
     {
-        return $this->where('kategori_produk_id', 1)->get();
+        return self::where('kategori_produk_id', 1)->limit(4)->get();
     }
 
-    public function dataProdukLaptop()
+    public static function dataProdukLaptop()
     {
-        return $this->where('kategori_produk_id', 2)->get();
+        return self::where('kategori_produk_id', 2)->limit(4)->get();
     }
 
-    public function dataProdukKulkas()
+    public static function dataProdukKulkas()
     {
-        return $this->where('kategori_produk_id', 3)->get();
+        return self::where('kategori_produk_id', 3)->limit(4)->get();
     }
 
     public function dataProdukID($id)
     {
-        return DB::table($this->table)
-            ->where('id', $id)
-            ->first();
+        return Produk::find($id);
     }
 }
