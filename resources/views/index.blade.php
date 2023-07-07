@@ -1,4 +1,5 @@
 @extends('layouts.appfront')
+
 @section('content')
     <!-- Slider -->
     <section class="section-slide">
@@ -424,28 +425,37 @@
             </div>
 
             <div class="row isotope-grid">
-                @foreach ($dataTv as $p)
-                    <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item tv">
+                @foreach ($produk as $p)
+                    @php
+                        $categoryClass = '';
+                        $tvProducts = $dataTv->toArray();
+                        $laptopProducts = $dataLaptop->toArray();
+                        $kulkasProducts = $dataKulkas->toArray();
+                        
+                        if (in_array($p->toArray(), $tvProducts)) {
+                            $categoryClass = 'tv';
+                        } elseif (in_array($p->toArray(), $laptopProducts)) {
+                            $categoryClass = 'laptop';
+                        } elseif (in_array($p->toArray(), $kulkasProducts)) {
+                            $categoryClass = 'kulkas';
+                        }
+                    @endphp
+
+                    <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item {{ $categoryClass }}">
                         <!-- Block2 -->
                         <div class="block2">
                             <div class="block2-pic hov-img0">
                                 <img src="{{ asset('home/images/' . $p->foto_produk) }}" alt="IMG-PRODUCT">
-
-                                <a href="#"
-                                    class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                                    Quick View
-                                </a>
+                                <a href="{{ route('products.show', $p->id) }}"
+                                    class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04">Quick
+                                    View</a>
                             </div>
 
                             <div class="block2-txt flex-w flex-t p-t-14">
                                 <div class="block2-txt-child1 flex-col-l t">
-                                    <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                                        {{ $p->nama }}
-                                    </a>
-
-                                    <span class="stext-105 cl3">
-                                        Rp {{ number_format($p->harga, 0, ',', '.') }}
-                                    </span>
+                                    <a href="product-detail.html"
+                                        class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">{{ $p->nama }}</a>
+                                    <span class="stext-105 cl3">Rp {{ number_format($p->harga, 0, ',', '.') }}</span>
                                 </div>
 
                                 <div class="block2-txt-child2 flex-r p-t-3">
@@ -461,79 +471,6 @@
                     </div>
                 @endforeach
 
-                @foreach ($dataLaptop as $p)
-                    <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item laptop">
-                        <!-- Block2 -->
-                        <div class="block2">
-                            <div class="block2-pic hov-img0">
-                                <img src="{{ asset('home/images/' . $p->foto_produk) }}" alt="IMG-PRODUCT">
-
-                                <a href="#"
-                                    class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                                    Quick View
-                                </a>
-                            </div>
-
-                            <div class="block2-txt flex-w flex-t p-t-14">
-                                <div class="block2-txt-child1 flex-col-l t">
-                                    <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                                        {{ $p->nama }}
-                                    </a>
-
-                                    <span class="stext-105 cl3">
-                                        Rp {{ number_format($p->harga, 0, ',', '.') }}
-                                    </span>
-                                </div>
-
-                                <div class="block2-txt-child2 flex-r p-t-3">
-                                    <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                        <img class="icon-heart1 dis-block trans-04"
-                                            src="{{ asset('home/images/icons/icon-heart-01.png') }}" alt="ICON">
-                                        <img class="icon-heart2 dis-block trans-04 ab-t-l"
-                                            src="{{ asset('home/images/icons/icon-heart-02.png') }}" alt="ICON">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
-
-                @foreach ($dataKulkas as $p)
-                    <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item kulkas">
-                        <!-- Block2 -->
-                        <div class="block2">
-                            <div class="block2-pic hov-img0">
-                                <img src="{{ asset('home/images/' . $p->foto_produk) }}" alt="IMG-PRODUCT">
-
-                                <a href="#"
-                                    class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-                                    Quick View
-                                </a>
-                            </div>
-
-                            <div class="block2-txt flex-w flex-t p-t-14">
-                                <div class="block2-txt-child1 flex-col-l t">
-                                    <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                                        {{ $p->nama }}
-                                    </a>
-
-                                    <span class="stext-105 cl3">
-                                        Rp {{ number_format($p->harga, 0, ',', '.') }}
-                                    </span>
-                                </div>
-
-                                <div class="block2-txt-child2 flex-r p-t-3">
-                                    <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                        <img class="icon-heart1 dis-block trans-04"
-                                            src="{{ asset('home/images/icons/icon-heart-01.png') }}" alt="ICON">
-                                        <img class="icon-heart2 dis-block trans-04 ab-t-l"
-                                            src="{{ asset('home/images/icons/icon-heart-02.png') }}" alt="ICON">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
             </div>
 
             <!-- Load more -->
@@ -544,39 +481,46 @@
                         Load More
                     </a>
                 @endif
+
+                <!-- Tambahkan script jQuery -->
+                <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                <script>
+                    $(document).ready(function() {
+                        // Tangkap peristiwa klik pada tombol "Load More"
+                        $('.load-more-button').on('click', function(e) {
+                            e.preventDefault();
+
+                            var url = $(this).attr('href');
+
+                            // Buat permintaan AJAX untuk memuat konten produk tambahan
+                            $.ajax({
+                                url: url,
+                                method: 'GET',
+                                success: function(response) {
+                                    var productsContainer = $(response).find('.row.isotope-grid');
+
+                                    // Tambahkan konten produk tambahan ke halaman
+                                    $('.isotope-grid').append(productsContainer);
+
+                                    // Periksa apakah ada tombol "Load More" baru
+                                    var newLoadMoreButton = $(response).find('.load-more-button');
+                                    if (newLoadMoreButton.length) {
+                                        // Ganti URL tombol "Load More" dengan URL baru
+                                        $('.load-more-button').attr('href', newLoadMoreButton.attr('href'));
+                                    } else {
+                                        // Jika tidak ada tombol "Load More" baru, sembunyikan tombol
+                                        $('.load-more-button').hide();
+                                    }
+                                },
+                                error: function(xhr) {
+                                    // Tangani kesalahan jika permintaan gagal
+                                    console.log(xhr.responseText);
+                                }
+                            });
+                        });
+                    });
+                </script>
             </div>
         </div>
     </section>
 @endsection
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var loadMoreButton = document.querySelector('.load-more-button');
-        var loadMoreContainer = document.querySelector('#load-more-container');
-
-        loadMoreButton.addEventListener('click', function(event) {
-            event.preventDefault();
-
-            var url = loadMoreButton.getAttribute('href');
-
-            fetch(url)
-                .then(response => response.text())
-                .then(data => {
-                    var parser = new DOMParser();
-                    var doc = parser.parseFromString(data, 'text/html');
-                    var productsContainer = doc.querySelector('.row.isotope-grid');
-                    var newLoadMoreContainer = doc.querySelector('#load-more-container');
-
-                    loadMoreContainer.parentNode.removeChild(loadMoreContainer);
-                    document.querySelector('.isotope-grid').insertAdjacentHTML('beforeend',
-                        productsContainer.innerHTML);
-
-                    if (newLoadMoreContainer) {
-                        document.querySelector('.isotope-grid').insertAdjacentElement('afterend',
-                            newLoadMoreContainer);
-                    }
-                })
-                .catch(error => console.error(error));
-        });
-    });
-</script>
