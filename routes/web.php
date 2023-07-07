@@ -44,6 +44,9 @@ Route::get("/contact", function () {
     return view('contact');
 });
 
+Route::get('/products', [SuntronicController::class, 'loadMore'])->name('products.loadMore');
+Route::get('/products/{id}', [SuntronicController::class, 'show'])->name('products.show');
+
 //Admin
 Route::group(['middleware' => ['auth']], function () {
     Route::prefix('admin')->name('admin.')->group(function () {

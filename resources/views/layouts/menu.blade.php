@@ -42,12 +42,12 @@
 					<div class="menu-desktop">
 						<ul class="main-menu">
 							<li class="active-menu">
-								<a href="index.html">Home</a>
+								<a href="{{ url('/') }}">Home</a>
 
 							</li>
 
 							<li>
-								<a href="{{ $produk->nextPageUrl() }}">Shop</a>
+								<a href="{{ route('products.loadMore', ['page' => $produk->currentPage() + 1]) }}">Shop</a>
 							</li>
 
 							<li class="label1" data-label1="hot">
@@ -148,7 +148,7 @@
 
 			<ul class="main-menu-m">
 				<li>
-					<a href="index.html">Home</a>
+					<a href="{{ url('/') }}">Home</a>
 					{{-- <ul class="sub-menu-m">
 						<li><a href="index.html">Homepage 1</a></li>
 						<li><a href="home-02.html">Homepage 2</a></li>
@@ -160,7 +160,7 @@
 				</li>
 
 				<li>
-					<a href="{{ $produk->nextPageUrl() }}">Shop</a>
+					<a href="{{ route('products.loadMore', ['page' => $produk->currentPage() + 1]) }}">Shop</a>
 				</li>
 
 				<li>

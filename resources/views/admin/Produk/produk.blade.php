@@ -3,7 +3,7 @@
 
 <h1 class="mt-4">Tables</h1>
 <ol class="breadcrumb mb-4">
-    <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+    <li class="breadcrumb-item"><a href="{{url('admin/dashboard')}}">Dashboard</a></li>
     <li class="breadcrumb-item active">Tables</li>
 </ol>
 <div class="card mb-4">
@@ -21,6 +21,7 @@
     </div>
     <div class="card-body table-responsive">
         <table id="datatablesSimple">
+        <table class="table table-bordered table-hover">
             <thead>
                 <tr>
                     <th>No</th>
@@ -31,7 +32,7 @@
                     <th>Harga Diskon</th>
                     <th>Stok</th>
                     <th>Foto Produk</th>
-                    <th>Action</th>
+                    <th>Aksi</th>
                 </tr>
             </thead>
             <tbody>

@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\KategoriProduk;
 use App\Models\Produk;
-use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Request;
+use Illuminate\Pagination\LengthAwarePaginator;
 
 class SuntronicController extends Controller
 {
@@ -14,45 +14,56 @@ class SuntronicController extends Controller
      */
     public function index(Request $request)
     {
-        $perpage = 16;
-        $page = $request->query('page',1);
+        $perPage = 16;
+        $page = $request->query('page', 1);
 
-        $produk = Produk::paginate($perpage, ['*'], 'page', $page);
+        $produk = Produk::take($perPage)->paginate($perPage, ['*'], 'page', $page);
 
-        $new = new Produk();
-
-        $dataTv = $new->dataProdukTV();
-        $dataLaptop = $new->dataProdukLaptop();
-        $dataKulkas = $new->dataProdukKulkas();
+        $dataTv = Produk::dataProdukTV();
+        $datLaptop = Produk::dataProdukLaptop();
+        $dataKulkas = Produk::dataProdukKulkas();
 
         $kategori = KategoriProduk::all();
 
-        return view('index', ['produk' => $produk, 'dataTv' => $dataTv, 'dataLaptop' => $dataLaptop, 'dataKulkas' => $dataKulkas, 'kategori_produk' => $kategori]);
-
+        return view('index', [
+            'produk' => $produk,
+            'dataTv' => $dataTv,
+            'dataLaptop' => $datLaptop,
+            'dataKulkas' => $dataKulkas,
+            'kategori_produk' => $kategori
+        ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
+    public function loadMore(Request $request)
     {
-        //
-    }
+        $perPage = 16;
+        $page = $request->query('page', 1);
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
+        $produk = Produk::take($perPage)->paginate($perPage, ['*'], 'page', $page);
+
+        $dataTv = Produk::dataProdukTV();
+        $datLaptop = Produk::dataProdukLaptop();
+        $dataKulkas = Produk::dataProdukKulkas();
+
+        $kategori = KategoriProduk::all();
+
+        return view('load-more', [
+            'produk' => $produk,
+            'dataTv' => $dataTv,
+            'dataLaptop' => $datLaptop,
+            'dataKulkas' => $dataKulkas,
+            'kategori_produk' => $kategori
+        ]);
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show($id)
     {
-        //
+        $produk = Produk::find($id);
+
+        return view('modal.modal', ['produk' => $produk]);
     }
 
     /**

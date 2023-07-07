@@ -1,8 +1,7 @@
 @extends('layouts.appfront')
-
 @section('content')
     <!-- Slider -->
-    <section class="section-slide">
+    {{-- <section class="section-slide">
         <div class="wrap-slick1">
             <div class="slick1">
 
@@ -11,13 +10,13 @@
                         <div class="flex-col-l-m h-full p-t-100 p-b-30 respon5">
                             <div class="layer-slick1 animated visible-false" data-appear="fadeInDown" data-delay="0">
                                 <span class="ltext-101 cl2 respon2">
-                                Powerful Laptops
+                                    Powerful Laptops
                                 </span>
                             </div>
 
                             <div class="layer-slick1 animated visible-false" data-appear="fadeInUp" data-delay="800">
                                 <h2 class="ltext-201 cl2 p-t-19 p-b-43 respon1">
-                                NEW PRODUK
+                                    NEW PRODUK
                                 </h2>
                             </div>
 
@@ -82,9 +81,9 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
-
+    <br>
     <!-- Banner -->
     <div class="sec-banner bg0 p-t-80 p-b-50">
         <div class="container">
@@ -447,7 +446,7 @@
                             <div class="block2-pic hov-img0">
                                 <img src="{{ asset('home/images/' . $p->foto_produk) }}" alt="IMG-PRODUCT">
                                 <a href="{{ route('products.show', $p->id) }}"
-                                    class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04">Quick
+                                    class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">Quick
                                     View</a>
                             </div>
 
