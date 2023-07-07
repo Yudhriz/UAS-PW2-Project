@@ -35,14 +35,10 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/',[SuntronicController::class, 'index']);
 
 //about
-Route::get("/about", function () {
-    return view('about');
-});
+Route::get('/about',[SuntronicController::class, 'about']);
 
 //contact
-Route::get("/contact", function () {
-    return view('contact');
-});
+Route::get('/contact',[SuntronicController::class, 'contact']);
 
 Route::get('/products', [SuntronicController::class, 'loadMore'])->name('products.loadMore');
 Route::get('/products/{id}', [SuntronicController::class, 'show'])->name('products.show');

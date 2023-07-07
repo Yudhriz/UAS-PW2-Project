@@ -41,27 +41,27 @@
 					<!-- Menu desktop -->
 					<div class="menu-desktop">
 						<ul class="main-menu">
-							<li class="active-menu">
-								<a href="{{ url('/') }}">Home</a>
+                            <li <?php echo (Request::is('/') ? 'class="active-menu"' : ''); ?>>
+                                <a href="{{ url('/') }}">Home</a>
+                            </li>
 
-							</li>
+                            <li <?php echo (Request::is('products*') ? 'class="active-menu"' : ''); ?>>
+                                <a href="{{ route('products.loadMore', ['page' => $produk->currentPage() + 1]) }}">Shop</a>
+                            </li>
 
-							<li>
-								<a href="{{ route('products.loadMore', ['page' => $produk->currentPage() + 1]) }}">Shop</a>
-							</li>
+                            <li class="label1" data-label1="hot">
+                                <a href="shoping-cart.html">Features</a>
+                            </li>
 
-							<li class="label1" data-label1="hot">
-								<a href="shoping-cart.html">Features</a>
-							</li>
+                            <li <?php echo (Request::is('about*') ? 'class="active-menu"' : ''); ?>>
+                                <a href="/about">About</a>
+                            </li>
 
-							<li>
-								<a href="/about">About</a>
-							</li>
+                            <li <?php echo (Request::is('contact*') ? 'class="active-menu"' : ''); ?>>
+                                <a href="/contact">Contact</a>
+                            </li>
+                        </ul>
 
-							<li>
-								<a href="/contact">Contact</a>
-							</li>
-						</ul>
 					</div>
 
 					<!-- Icon header -->
@@ -147,34 +147,29 @@
 			</ul>
 
 			<ul class="main-menu-m">
-				<li>
-					<a href="{{ url('/') }}">Home</a>
-					{{-- <ul class="sub-menu-m">
-						<li><a href="index.html">Homepage 1</a></li>
-						<li><a href="home-02.html">Homepage 2</a></li>
-						<li><a href="home-03.html">Homepage 3</a></li>
-					</ul> --}}
-					<span class="arrow-main-menu-m">
-						<i class="fa fa-angle-right" aria-hidden="true"></i>
-					</span>
-				</li>
+                <li <?php echo (Request::is('/') ? 'class="active-menu-m"' : ''); ?>>
+                    <a href="{{ url('/') }}">Home</a>
+                    <span class="arrow-main-menu-m">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </span>
+                </li>
 
-				<li>
-					<a href="{{ route('products.loadMore', ['page' => $produk->currentPage() + 1]) }}">Shop</a>
-				</li>
+                <li <?php echo (Request::is('products*') ? 'class="active-menu-m"' : ''); ?>>
+                    <a href="{{ route('products.loadMore', ['page' => $produk->currentPage() + 1]) }}">Shop</a>
+                </li>
 
-				<li>
-					<a href="shoping-cart.html" class="label1 rs1" data-label1="hot">Features</a>
-				</li>
+                <li>
+                    <a href="shoping-cart.html" class="label1 rs1" data-label1="hot">Features</a>
+                </li>
 
-				<li>
-					<a href="about.html">About</a>
-				</li>
+                <li <?php echo (Request::is('about*') ? 'class="active-menu-m"' : ''); ?>>
+                    <a href="/about">About</a>
+                </li>
 
-				<li>
-					<a href="contact.html">Contact</a>
-				</li>
-			</ul>
+                <li <?php echo (Request::is('contact*') ? 'class="active-menu-m"' : ''); ?>>
+                    <a href="/contact">Contact</a>
+                </li>
+            </ul>
 		</div>
 
 		<!-- Modal Search -->

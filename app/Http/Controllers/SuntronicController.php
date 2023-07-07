@@ -33,6 +33,28 @@ class SuntronicController extends Controller
             'kategori_produk' => $kategori
         ]);
     }
+    public function about(Request $request)
+    {
+        $perPage = 16;
+        $page = $request->query('page', 1);
+
+        $produk = Produk::take($perPage)->paginate($perPage, ['*'], 'page', $page);
+
+        return view('about', [
+            'produk' => $produk,
+        ]);
+    }
+    public function contact(Request $request)
+    {
+        $perPage = 16;
+        $page = $request->query('page', 1);
+
+        $produk = Produk::take($perPage)->paginate($perPage, ['*'], 'page', $page);
+
+        return view('contact', [
+            'produk' => $produk,
+        ]);
+    }
 
     public function loadMore(Request $request)
     {
