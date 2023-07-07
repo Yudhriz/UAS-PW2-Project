@@ -2,12 +2,20 @@
 @section('content')
 
 <!-- Title page -->
-<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('images/bg-01.jpg');">
-		<h2 class="ltext-105 cl0 txt-center">
+<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('{{ asset('home/images/bg-1.jpg') }}');">
+		{{-- <h2 class="ltext-105 cl0 txt-center">
 			Contact
-		</h2>
-	</section>	
-    
+		</h2> --}}
+	</section>
+    <style>
+        /* Gaya responsif untuk perangkat seluler */
+        @media (max-width: 767px) {
+            .bg-img1 {
+                background-position: center;
+            }
+        }
+    </style>
+
 	<!-- Content page -->
 	<section class="bg0 p-t-104 p-b-116">
 		<div class="container">
@@ -83,7 +91,6 @@
 				</div>
 			</div>
 		</div>
-	</section>	
+	</section>
 	@endsection
-	
-	
+
