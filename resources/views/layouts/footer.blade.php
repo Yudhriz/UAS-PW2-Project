@@ -90,7 +90,7 @@
                  <form>
                      <div class="wrap-input1 w-full p-b-4">
                          <input class="input1 bg-none plh1 stext-107 cl7" type="text" name="email"
-                             placeholder="email@sunElecto.com">
+                             placeholder="email@Suntronic.com">
                          <div class="focus-input1 trans-04"></div>
                      </div>
 
