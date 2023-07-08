@@ -40,9 +40,9 @@
                     <td>{{$ps->tgl_pesanan}}</td>
                     <td>{{$ps->produk_id}}</td>
                     <td>
-                        <a class="btn btn-primary" href="{{url('/admin/pesanan/viewpesanan/'.$ps->id)}})}}">View</a>
-                        <a class="btn btn-primary" href="{{url('/admin/pesanan/editpesanan/'.$ps->id)}})}}">Edit</a>
-                        <a class="btn btn-primary" href="{{url('/admin/pesanan/delete/'.$ps->id)}})}}" onclick="if(!confirm('Anda Yakin Hapus Data Pesanan?')) {return false}">Delete</a>
+                        <a class="btn btn-primary" href="{{url('/admin/pesanan/viewpesanan/'.$ps->id)}})}}"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                        <a class="btn btn-secondary" href="{{url('/admin/pesanan/editpesanan/'.$ps->id)}})}}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                        <a class="btn btn-danger" href="{{url('/admin/pesanan/delete/'.$ps->id)}})}}" onclick="if(!confirm('Anda Yakin Hapus Data Pesanan?')) {return false}"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
                     </td>
                 </tr>
                 @endforeach

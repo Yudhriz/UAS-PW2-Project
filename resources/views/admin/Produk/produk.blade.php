@@ -49,9 +49,9 @@
                     <td>{{$p->stok}}</td>
                     <td>{{$p->foto_produk}}</td>
                     <td>
-                        <a class="btn btn-primary" href="{{url('/admin/produk/viewproduk/'.$p->id)}}">View</a>
-                        <a class="btn btn-primary" href="{{url('/admin/produk/editproduk/'.$p->id)}}">Edit</a>
-                        <a class="btn btn-primary" href="{{url('/admin/produk/delete/'.$p->id)}}" onclick="if(!confirm('Anda Yakin Hapus Data Produk?')) {return false}">Delete</a>
+                        <a class="btn btn-primary" href="{{url('/admin/produk/viewproduk/'.$p->id)}}"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                        <a class="btn btn-secondary" href="{{url('/admin/produk/editproduk/'.$p->id)}}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                        <a class="btn btn-danger" href="{{url('/admin/produk/delete/'.$p->id)}}" onclick="if(!confirm('Anda Yakin Hapus Data Produk?')) {return false}"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
                     </td>
                 </tr>
                 @endforeach
