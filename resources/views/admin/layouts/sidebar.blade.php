@@ -18,20 +18,24 @@
               <span class="hide-menu">Page</span>
             </li>
             <li class="sidebar-item">
+            @if (Auth::user()->role == 'admin'|| Auth::user()->role == 'staf')
               <a class="sidebar-link" href="{{url('admin/produk')}}" aria-expanded="false">
                 <span>
                   <i class="ti ti-article"></i>
                 </span>
                 <span class="hide-menu">Produk</span>
               </a>
+            @endif
             </li>
             <li class="sidebar-item">
+            @if (Auth::user()->role == 'admin'|| Auth::user()->role == 'staf')
               <a class="sidebar-link" href="{{url('admin/kproduk')}}" aria-expanded="false">
                 <span>
                   <i class="ti ti-article"></i>
                 </span>
                 <span class="hide-menu">Kategori Produk</span>
               </a>
+            @endif
             </li>
             <li class="sidebar-item">
               <a class="sidebar-link" href="{{url('admin/pesanan')}}" aria-expanded="false">
