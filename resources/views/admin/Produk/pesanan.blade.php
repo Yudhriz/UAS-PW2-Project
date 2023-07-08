@@ -15,8 +15,9 @@
 </div>
 <div class="card mb-4">
     <div class="card-header">
-        <!-- <i class="fas fa-table me-1"></i> -->
+        @if (Auth::user()->role == 'admin')
         <a class="btn btn-primary" href="{{url('/admin/pesanan/createpesanan')}}">Create Pesanan</a>
+        @endif
     </div>
     <div class="card-body table-responsive">
         <table id="datatablesSimple">
