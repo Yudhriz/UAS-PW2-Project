@@ -42,9 +42,9 @@
                     <td>{{$pe->no_hp}}</td>
                     <td>{{$pe->email}}</td>
                     <td>
-                        <a class="btn btn-primary" href="{{url('/admin/pelanggan/viewpelanggan/'.$pe->id)}}">View</a>
-                        <a class="btn btn-primary" href="{{url('/admin/pelanggan/editpelanggan/'.$pe->id)}}">Edit</a>
-                        <a class="btn btn-primary" href="{{url('/admin/pelanggan/delete/'.$pe->id)}}" onclick="if(!confirm('Anda Yakin Hapus Data Pelanggan?')) {return false}">Delete</a>
+                        <a class="btn btn-primary" href="{{url('/admin/pelanggan/viewpelanggan/'.$pe->id)}}"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                        <a class="btn btn-secondary" href="{{url('/admin/pelanggan/editpelanggan/'.$pe->id)}}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                        <a class="btn btn-danger" href="{{url('/admin/pelanggan/delete/'.$pe->id)}}" onclick="if(!confirm('Anda Yakin Hapus Data Pelanggan?')) {return false}"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
                     </td>
                 </tr>
                 @endforeach
