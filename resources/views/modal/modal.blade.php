@@ -24,7 +24,8 @@
                     <div class="col-md-6 col-lg-7">
                         <div class="card-image">
                             <!-- Product image -->
-                            <img src="{{ asset('home/images/' . $produk->foto_produk) }}" alt="IMG-PRODUCT" style="max-width: 100%;">
+                            <img src="{{ asset('home/images/' . $produk->foto_produk) }}" alt="IMG-PRODUCT"
+                                style="max-width: 100%;">
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-5">
@@ -57,14 +58,19 @@
                                 </select>
                             </div> --}}
 
-                            <!-- Quantity -->
-                            <div class="card-option mb-3">
-                                <label for="quantity">Quantity</label>
-                                <input id="quantity" class="quantity-input form-control" type="number" name="quantity" value="1">
-                            </div>
 
-                            <!-- Add to cart button -->
-                            <button class="card-btn btn btn-primary mb-2">Add to cart</button>
+                            <form action="{{ route('cart.add') }}" method="POST">
+                                @csrf
+                                <input type="hidden" name="produk_id" value="{{ $produk->id }}">
+                                <div class="card-option mb-3">
+                                    <!-- Quantity -->
+                                    <label for="quantity">Quantity</label>
+                                    <input type="number" class="quantity-input form-control" name="jumlah"
+                                        value="1">
+                                </div>
+                                <!-- Add to cart button -->
+                                <button class="card-btn btn btn-primary mb-2" type="submit">Add to cart</button>
+                            </form>
 
                             <!-- Share buttons -->
                             <div class="card-share">
@@ -73,9 +79,15 @@
                                     data-tooltip="Add to Wishlist">
                                     <i class="zmdi zmdi-favorite"></i>
                                 </a>
-                                <a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100 mx-1 data-tooltip="Facebook""><i class="fa fa-facebook"></i></a>
-                                <a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100 mx-1 data-tooltip="Twitter""><i class="fa fa-twitter"></i></a>
-                                <a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100 mx-1 data-tooltip="Google Plus""><i class="fa fa-google-plus"></i></a>
+                                <a href="#"
+                                    class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100 mx-1 data-tooltip="Facebook""><i
+                                        class="fa fa-facebook"></i></a>
+                                <a href="#"
+                                    class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100 mx-1 data-tooltip="Twitter""><i
+                                        class="fa fa-twitter"></i></a>
+                                <a href="#"
+                                    class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100 mx-1 data-tooltip="Google
+                                    Plus""><i class="fa fa-google-plus"></i></a>
                             </div>
                         </div>
                     </div>
