@@ -32,15 +32,42 @@ class ProdukController extends Controller
          return view('admin.produk.kproduk', compact('kategori_produk'));
     }
 
+
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(Request $request)
     {
-        $kategori_produk = DB::table('kategori_produk')->get();
-        $produk = DB::table('produk')->get();
-        return view('admin.produk.createproduk', compact('kategori_produk', 'produk'));
+    $kategori_produk = DB::table('kategori_produk')->get();
+    $produk = DB::table('produk')->get();
+    if ($request->hasFile('foto_produk')) {
+        $urlGambar = $this->uploadGambar($request);
     }
+    return view('admin.produk.createproduk', compact('kategori_produk', 'produk'));
+}
+
+public function uploadGambar(Request $request)
+{
+    if ($request->hasFile('foto_produk')) {
+        $file = $request->file('foto_produk');
+        $fileName = time() . '_' . $file->getClientOriginalName();
+        $destinationPath = public_path('home/images');
+        $file->move($destinationPath, $fileName);
+
+        // Simpan nama file ke dalam database atau variabel lain jika diperlukan
+        // contoh: $namaFile = $fileName;
+
+        // Menggunakan asset() untuk menghasilkan URL gambar
+        $url = asset('home/images/' . $fileName);
+
+        // Kembalikan URL gambar sebagai respons atau gunakan sesuai kebutuhan Anda
+        return $url;
+    }
+
+    // Kembalikan respon atau lakukan tindakan jika tidak ada file yang diunggah
+    return response('Tidak ada file yang diunggah.', 400);
+}
+
 
     /**
      * Store a newly created resource in storage.
