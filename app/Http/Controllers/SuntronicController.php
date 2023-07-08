@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\KategoriProduk;
 use App\Models\Produk;
+use App\Models\Cart;
 use Illuminate\Http\Request;
 use Illuminate\Pagination\LengthAwarePaginator;
 
@@ -19,6 +20,8 @@ class SuntronicController extends Controller
 
         $produk = Produk::take($perPage)->paginate($perPage, ['*'], 'page', $page);
 
+        $cart = Cart::all();
+
         $dataTv = Produk::dataProdukTV();
         $datLaptop = Produk::dataProdukLaptop();
         $dataKulkas = Produk::dataProdukKulkas();
@@ -30,9 +33,11 @@ class SuntronicController extends Controller
             'dataTv' => $dataTv,
             'dataLaptop' => $datLaptop,
             'dataKulkas' => $dataKulkas,
-            'kategori_produk' => $kategori
+            'kategori_produk' => $kategori,
+            'cart' => $cart,
         ]);
     }
+
     public function about(Request $request)
     {
         $perPage = 16;
@@ -40,8 +45,11 @@ class SuntronicController extends Controller
 
         $produk = Produk::take($perPage)->paginate($perPage, ['*'], 'page', $page);
 
+        $cart = Cart::all();
+
         return view('about', [
             'produk' => $produk,
+            'cart' => $cart,
         ]);
     }
     public function contact(Request $request)
@@ -51,8 +59,11 @@ class SuntronicController extends Controller
 
         $produk = Produk::take($perPage)->paginate($perPage, ['*'], 'page', $page);
 
+        $cart = Cart::all();
+
         return view('contact', [
             'produk' => $produk,
+            'cart' => $cart,
         ]);
     }
 
@@ -62,6 +73,8 @@ class SuntronicController extends Controller
         $page = $request->query('page', 1);
 
         $produk = Produk::take($perPage)->paginate($perPage, ['*'], 'page', $page);
+
+        $cart = Cart::all();
 
         $dataTv = Produk::dataProdukTV();
         $datLaptop = Produk::dataProdukLaptop();
@@ -74,6 +87,7 @@ class SuntronicController extends Controller
             'dataTv' => $dataTv,
             'dataLaptop' => $datLaptop,
             'dataKulkas' => $dataKulkas,
+            'cart' => $cart,
             'kategori_produk' => $kategori
         ]);
     }
@@ -86,6 +100,16 @@ class SuntronicController extends Controller
         $produk = Produk::find($id);
 
         return view('modal.modal', ['produk' => $produk]);
+    }
+
+    public function addToCart(Request $request)
+    {
+        $cart = new Cart();
+        $cart->produk_id = $request->produk_id;
+        $cart->jumlah = $request->jumlah;
+        $cart->save();
+
+        return redirect('/');
     }
 
     /**

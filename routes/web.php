@@ -42,6 +42,7 @@ Route::get('/contact',[SuntronicController::class, 'contact']);
 
 Route::get('/products', [SuntronicController::class, 'loadMore'])->name('products.loadMore');
 Route::get('/products/{id}', [SuntronicController::class, 'show'])->name('products.show');
+Route::post('/cart/add', [SuntronicController::class, 'addToCart'])->name('cart.add');
 
 //Admin
 Route::group(['middleware' => ['auth','role:admin-staf-pelanggan']], function () {
