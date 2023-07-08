@@ -44,7 +44,7 @@ Route::get('/products', [SuntronicController::class, 'loadMore'])->name('product
 Route::get('/products/{id}', [SuntronicController::class, 'show'])->name('products.show');
 
 //Admin
-Route::group(['middleware' => ['auth']], function () {
+Route::group(['middleware' => ['auth','role:admin-staf-pelanggan']], function () {
     Route::prefix('admin')->name('admin.')->group(function () {
 
         //Admin produk
@@ -56,6 +56,7 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('/produk/delete/{id}', [ProdukController::class, 'destroy']);
         Route::get('/produk/viewproduk/{id}', [ProdukController::class, 'show'])->name('show');
         Route::get('/produk/editproduk/{id}', [ProdukController::class, 'edit']);
+        Route::post('/upload-gambar', [ProdukController::class, 'uploadGambar'])->name('upload.gambar');
 
         //Admin kategori_produk
         Route::get('/kproduk', [KategoriProdukController::class, 'index']);
