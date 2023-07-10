@@ -175,11 +175,12 @@ class SuntronicController extends Controller
         $tglPesanan = $request->input('tgl_pesanan');
         $alamat = $request->input('alamat');
         $userIds = $request->input('user_id');
+        $quantity = $request->input('jumlah');
         $produkIds = $request->input('produk_id');
         $totalHarga = $request->input('total_harga');
 
         // Memastikan semua data yang diperlukan tersedia
-        if ($tglPesanan && $alamat && $userIds && $produkIds && $totalHarga) {
+        if ($tglPesanan && $alamat && $userIds && $produkIds && $totalHarga && $quantity) {
             // Menyiapkan array untuk menyimpan data pesanan
             $pesananData = [];
 
@@ -192,6 +193,7 @@ class SuntronicController extends Controller
                     'total_harga' => $totalHarga[$i],
                     'tgl_pesanan' => $tglPesanan[$i],
                     'alamat' => $alamat[$i],
+                    'jumlah' => $quantity[$i],
                     'user_id' => $userIds[$i],
                     'produk_id' => $produkIds[$i],
                 ];
