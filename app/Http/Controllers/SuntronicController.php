@@ -203,7 +203,7 @@ class SuntronicController extends Controller
             Pesanan::insert($pesananData);
 
             // Redirect atau melakukan tindakan lainnya setelah operasi berhasil
-            return redirect('/');
+            return redirect('/orders/success');
         }
 
         // Jika data yang diperlukan tidak lengkap, lakukan tindakan yang sesuai (misalnya, tampilkan pesan kesalahan)
@@ -214,9 +214,18 @@ class SuntronicController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function checkoutSuccess(Request $request)
     {
-        //
+        $user = Auth::user();
+        if ($user) {
+            $pesanan = Pesanan::where('user_id', $user->id)->get();
+        } else {
+            $pesanan = null; // Jika pengguna tidak terotentikasi, set keranjang menjadi null atau sesuai kebutuhan Anda
+        }
+
+        return view('checkout-success', [
+            'pesanan' => $pesanan,
+        ]);
     }
 
     /**
