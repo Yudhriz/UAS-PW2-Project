@@ -44,6 +44,7 @@ Route::get('/products', [SuntronicController::class, 'loadMore'])->name('product
 Route::get('/products/{id}', [SuntronicController::class, 'show'])->name('products.show');
 Route::post('/cart/add', [SuntronicController::class, 'addToCart'])->name('cart.add');
 Route::get('/cart/{id}', [SuntronicController::class, 'cartShow'])->name('cart.show');
+Route::post('/cart/delete/{id}', [SuntronicController::class, 'deleteCart'])->name('cart.delete');
 Route::post('/cart/update', [SuntronicController::class, 'updateCart'])->name('cart.update');
 Route::post('/orders/add', [SuntronicController::class, 'addToPesanan'])->name('orders.add');
 Route::get('/orders/success', [SuntronicController::class, 'checkoutSuccess'])->name('orders.success');

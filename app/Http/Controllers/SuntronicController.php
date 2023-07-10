@@ -228,6 +228,15 @@ class SuntronicController extends Controller
         ]);
     }
 
+    public function deleteCart($id)
+    {
+        $cart = Cart::find($id);
+        $cart->destroy($id);
+
+        return redirect('/')->with('success', 'Cart item deleted successfully');
+    }
+
+
     /**
      * Update the specified resource in storage.
      */
