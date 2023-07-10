@@ -32,20 +32,23 @@ use Illuminate\Support\Facades\Auth;
 // });
 
 // Frontend
-Route::get('/',[SuntronicController::class, 'index']);
+Route::get('/', [SuntronicController::class, 'index']);
 
 //about
-Route::get('/about',[SuntronicController::class, 'about']);
+Route::get('/about', [SuntronicController::class, 'about']);
 
 //contact
-Route::get('/contact',[SuntronicController::class, 'contact']);
+Route::get('/contact', [SuntronicController::class, 'contact']);
 
 Route::get('/products', [SuntronicController::class, 'loadMore'])->name('products.loadMore');
 Route::get('/products/{id}', [SuntronicController::class, 'show'])->name('products.show');
 Route::post('/cart/add', [SuntronicController::class, 'addToCart'])->name('cart.add');
+Route::get('/cart/{id}', [SuntronicController::class, 'cartShow'])->name('cart.show');
+Route::post('/cart/update', [SuntronicController::class, 'updateCart'])->name('cart.update');
+Route::post('/orders/add', [SuntronicController::class, 'addToPesanan'])->name('orders.add');
 
 //Admin
-Route::group(['middleware' => ['auth','role:admin-staf-pelanggan']], function () {
+Route::group(['middleware' => ['auth', 'role:admin-staf-pelanggan']], function () {
     Route::prefix('admin')->name('admin.')->group(function () {
 
         //Admin produk
@@ -90,4 +93,4 @@ Route::group(['middleware' => ['auth','role:admin-staf-pelanggan']], function ()
 
 Auth::routes();
 
-Route::get('/admin/dashboard', [HomeController::class, 'index'])->name('index');
+Route::get('/', [HomeController::class, 'index'])->name('index')->middleware('web');

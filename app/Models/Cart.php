@@ -15,6 +15,7 @@ class Cart extends Model
     protected $fillable = [
         'produk_id',
         'jumlah',
+        'user_id',
     ];
 
     public function produk()
