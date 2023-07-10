@@ -12,18 +12,19 @@ class Pesanan extends Model
     public $timestamps = false;
     protected $table = 'pesanan';
     protected $fillable = [
-        'pelanggan_id',
-        'tgl_pesanan',
         'produk_id',
+        'total_harga',
+        'tgl_pesanan',
+        'alamat',
+        'user_id',
     ];
     public function produk()
     {
         return $this->belongsTo(Produk::class);
     }
-
-    public function pelanggan()
+    public function user()
     {
-        return $this->belongsTo(Pelanggan::class);
+        return $this->belongsTo(User::class);
     }
 
     public function getAllData(){
