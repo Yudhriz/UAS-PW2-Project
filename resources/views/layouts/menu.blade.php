@@ -262,6 +262,14 @@
                                     <span class="header-cart-item-info">
                                         {{ $c->jumlah }} x {{ number_format($c->produk->harga, 0, ',', '.') }}
                                     </span>
+                                    <form action="{{ route('cart.delete', $c->id) }}" method="POST" class="delete-form">
+                                        @csrf
+                                        <div class="header-cart-item-txt p-t-6 m-b-10 hov-cl1 trans-04">
+                                        <button type="button" class="delete-btn">
+                                            <i class="fa fa-trash delete-icon" style="font-size: 20px;"></i>
+                                        </button>
+                                        </div>
+                                    </form>
                                 </div>
                             </li>
                         @endforeach
@@ -307,3 +315,47 @@
 			</div>
 		</div>
 	</div>
+
+    <div id="deleteModal" class="modal">
+        <div class="modal-content">
+            <h2>Delete Confirmation</h2>
+            <p>Are you sure you want to delete this item from your cart?</p>
+            <div class="modal-buttons">
+                <button id="cancelBtn" class="cancel-btn">Cancel</button>
+                <button id="confirmBtn" class="confirm-btn">Delete</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const deleteForms = document.querySelectorAll('.delete-form');
+            const confirmBtn = document.getElementById('confirmBtn');
+            const cancelBtn = document.getElementById('cancelBtn');
+            const deleteModal = document.getElementById('deleteModal');
+
+            deleteForms.forEach(form => {
+                form.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    const formElement = this;
+                    Swal.fire({
+                        title: 'Delete Confirmation',
+                        text: 'Are you sure you want to delete this item from your cart?',
+                        icon: 'question',
+                        showCancelButton: true,
+                        confirmButtonText: 'Delete',
+                        cancelButtonText: 'Cancel',
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            formElement.submit();
+                        }
+                    });
+                });
+            });
+
+            cancelBtn.addEventListener('click', function () {
+                deleteModal.style.display = 'none';
+            });
+        });
+    </script>
