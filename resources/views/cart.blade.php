@@ -157,6 +157,8 @@
 
                                         <input type="hidden" name="total_harga[]" value="{{ $subtotal }}">
 
+                                        <input type="hidden" name="jumlah[]" value="{{ $c->jumlah }}">
+
                                         <div class="bor8 bg0 m-b-12">
                                             <input id="tgl_pesanan" class="stext-111 cl8 plh3 size-111 p-lr-15"
                                                 type="date" name="tgl_pesanan[]" placeholder="Date"

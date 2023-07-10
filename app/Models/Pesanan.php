@@ -16,6 +16,7 @@ class Pesanan extends Model
         'total_harga',
         'tgl_pesanan',
         'alamat',
+        'jumlah',
         'user_id',
     ];
     public function produk()
