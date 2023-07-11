@@ -25,7 +25,7 @@ class PesananController extends Controller
         $pesanan = Pesanan::all();
 
         //perintah join diatas untuk menggabungkan tabel pesanan dan produk
-        return view('admin.produk.pelanggan', compact('pesanan'));
+        return view('admin.produk.pelanggan', ['pesanan' => $pesanan]);
     }
 
     /**
@@ -33,10 +33,9 @@ class PesananController extends Controller
      */
     public function create()
     {
-        $pelanggan = DB::table('pelanggan')->get();
         $produk = DB::table('produk')->get();
         $pesanan = DB::table('pesanan')->get();
-        return view('admin.produk.createpesanan', compact('pesanan', 'pelanggan', 'produk'));
+        return view('admin.produk.createpesanan', compact('pesanan','produk'));
     }
 
     /**
@@ -45,9 +44,12 @@ class PesananController extends Controller
     public function store(Request $request)
     {
         $pesanan = new Pesanan;
-        $pesanan->pelanggan_id= $request->pelanggan_id;
-        $pesanan->tgl_pesanan= $request->tgl_pesanan;
         $pesanan->produk_id= $request->produk_id;
+        $pesanan->tgl_pesanan= $request->tgl_pesanan;
+        $pesanan->total_harga= $request->total_harga;
+        $pesanan->alamat= $request->alamat;
+        $pesanan->jumlah= $request->jumlah;
+        $pesanan->user_id= $request->user_id;
         $pesanan->save();
         return redirect('/admin/pesanan');
     }
@@ -66,12 +68,10 @@ class PesananController extends Controller
      */
     public function edit(string $id)
     {
-        $pelanggan = DB::table('pelanggan')->get();
         $produk = DB::table('produk')->get();
         $pesanan = DB::table('pesanan')->where('id', $id)->get();
         return view('admin.produk.editpesanan', compact(
             'pesanan',
-            'pelanggan',
             'produk'
         ));
     }
@@ -82,9 +82,12 @@ class PesananController extends Controller
     public function update(Request $request)
     {
         $pesanan = Pesanan::find($request->id);
-        $pesanan->pelanggan_id= $request->pelanggan_id;
-        $pesanan->tgl_pesanan= $request->tgl_pesanan;
         $pesanan->produk_id= $request->produk_id;
+        $pesanan->tgl_pesanan= $request->tgl_pesanan;
+        $pesanan->total_harga= $request->total_harga;
+        $pesanan->alamat= $request->alamat;
+        $pesanan->jumlah= $request->jumlah;
+        $pesanan->user_id= $request->user_id;
         $pesanan->save();
         return redirect('/admin/pesanan');
     }
