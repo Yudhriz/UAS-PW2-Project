@@ -16,11 +16,11 @@
     @foreach ($pesanan as $ps)
     <input type="hidden" name="id" value="{{$ps->id}}">
     <div class="form-group row">
-      <label for="select" class="col-4 col-form-label">Pelanggan ID</label>
+      <label for="select" class="col-4 col-form-label">Produk ID</label>
       <div class="col-8">
-        <select id="select" name="pelanggan_id" class="custom-select">
-          @foreach ($pelanggan as $p)
-          <option value="{{$p->id}}">{{$p->nama}}</option>
+        <select id="select" name="produk_id" class="custom-select">
+          @foreach ($produk as $d)
+          <option value="{{$d->id}}">{{$d->nama}}</option>
           @endforeach
         </select>
       </div>
@@ -28,15 +28,33 @@
     <div class="form-group row">
       <label for="text1" class="col-4 col-form-label">tanggal Pesan</label>
       <div class="col-8">
-        <input id="text1" name="tgl_pesanan" type="date" class="form-control"value="{{$ps->tgl_pesanan}}">
+        <input id="text1" name="tgl_pesanan" type="date" class="form-control" value="{{$ps->tgl_pesanan}}">
       </div>
     </div>
     <div class="form-group row">
-      <label for="select" class="col-4 col-form-label">Produk ID</label>
+      <label for="text2" class="col-4 col-form-label">Total Harga</label>
       <div class="col-8">
-        <select id="select" name="produk_id" class="custom-select">
-          @foreach ($produk as $d)
-          <option value="{{$d->id}}">{{$d->nama}}</option>
+        <input id="text2" name="total_harga" type="text" class="form-control" value="{{$ps->total_harga}}">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="text3" class="col-4 col-form-label">Alamat</label>
+      <div class="col-8">
+        <input id="text2" name="alamat" type="text" class="form-control" value="{{$ps->alamat}}">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="text4" class="col-4 col-form-label">Jumlah</label>
+      <div class="col-8">
+        <input id="text4" name="jumlah" type="text" class="form-control" value="{{$ps->jumlah}}">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="select" class="col-4 col-form-label">User ID</label>
+      <div class="col-8">
+        <select id="select" name="user_id" class="custom-select">
+          @foreach ($pesanan as $p)
+          <option value="{{$p->user_id}}">{{$p->user_id}}</option>
           @endforeach
         </select>
       </div>

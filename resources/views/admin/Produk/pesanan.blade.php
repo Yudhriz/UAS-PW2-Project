@@ -25,6 +25,7 @@
             <thead>
                 <tr>
                     <th>No</th>
+                    <th>Nama Pemesan</th>
                     <th>Nama Produk</th>
                     <th>Tanggal</th>
                     <th>Jumlah</th>
@@ -39,6 +40,7 @@
                 @foreach($pesanan as $ps)
                 <tr>
                     <td>{{$no++}}</td>
+                    <td>{{ $ps->user ? $ps->user->name : 'akun telah dihapus' }}</td>
                     <td>{{$ps->produk->nama}}</td>
                     <td>{{$ps->tgl_pesanan}}</td>
                     <td>{{$ps->jumlah}}</td>
