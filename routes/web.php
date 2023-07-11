@@ -83,7 +83,7 @@ Route::group(['middleware' => ['auth', 'role:admin-staf-pelanggan']], function (
         Route::get('/pesanan/editpesanan/{id}', [PesananController::class, 'edit'])->name('edit');
 
         //Admin pelanggan
-        Route::get('/pelanggan', [PelangganController::class, 'index']);
+        Route::get('/pelanggan', [PesananController::class, 'index2']);
         Route::post('/pelanggan/store', [PelangganController::class, 'store']);
         Route::post('/pelanggan/update', [PelangganController::class, 'update']);
         Route::get('/pelanggan/delete/{id}', [PelangganController::class, 'destroy']);
