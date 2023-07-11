@@ -218,9 +218,11 @@ class SuntronicController extends Controller
     {
         $user = Auth::user();
         if ($user) {
-            $pesanan = Pesanan::where('user_id', $user->id)->get();
+            $pesanan = Pesanan::where('user_id', $user->id)
+                ->latest('created_at')
+                ->get();
         } else {
-            $pesanan = null; // Jika pengguna tidak terotentikasi, set keranjang menjadi null atau sesuai kebutuhan Anda
+            $pesanan = null;
         }
 
         return view('checkout-success', [

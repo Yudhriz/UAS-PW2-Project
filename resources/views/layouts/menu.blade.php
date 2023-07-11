@@ -1,4 +1,28 @@
-	<!-- Header -->
+	<style>
+        .left-top-bar {
+            position: relative;
+            background-color: #222;
+            padding: 10px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .scrolling-text {
+            display: inline-block;
+            animation: scroll-left 10s linear infinite;
+            white-space: nowrap;
+        }
+
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+    <!-- Header -->
 	<header>
 		<!-- Header desktop -->
 		<div class="container-menu-desktop">
@@ -6,14 +30,15 @@
 			<div class="top-bar">
 				<div class="content-topbar flex-sb-m h-full container">
 					@if (!Auth::check())
-                        <marquee class="left-top-bar" behavior="scroll" direction="left">
-                            Diharapkan untuk Login / Register terlebih dahulu.
-                        </marquee>
+                        <div class="left-top-bar">
+                            <span class="scrolling-text">Diharapkan untuk Login / Register terlebih dahulu.</span>
+                        </div>
                     @else
                         <div class="left-top-bar">
                             Happy shopping
                         </div>
                     @endif
+
 
 					<div class="right-top-bar flex-w h-full">
 						<a href="#" class="flex-c-m trans-04 p-lr-25">
