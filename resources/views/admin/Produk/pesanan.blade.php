@@ -25,10 +25,13 @@
             <thead>
                 <tr>
                     <th>No</th>
-                    <th>Pelanggan id</th>
-                    <th>tgl_pesanan</th>
-                    <th>produk_id</th>
+                    <th>Nama Produk</th>
+                    <th>Tanggal</th>
+                    <th>Jumlah</th>
+                    <th>Total Harga</th>
+                    @if (Auth::user()->role == 'admin')
                     <th>Aksi</th>
+                    @endif
                 </tr>
             </thead>
             <tbody>
@@ -36,14 +39,17 @@
                 @foreach($pesanan as $ps)
                 <tr>
                     <td>{{$no++}}</td>
-                    <td>{{$ps->pelanggan_id}}</td>
+                    <td>{{$ps->produk->nama}}</td>
                     <td>{{$ps->tgl_pesanan}}</td>
-                    <td>{{$ps->produk_id}}</td>
+                    <td>{{$ps->jumlah}}</td>
+                    <td>{{$ps->total_harga}}</td>
+                    @if (Auth::user()->role == 'admin')
                     <td>
                         <a class="btn btn-primary" href="{{url('/admin/pesanan/viewpesanan/'.$ps->id)}})}}"><i class="fa fa-eye" aria-hidden="true"></i></a>
                         <a class="btn btn-secondary" href="{{url('/admin/pesanan/editpesanan/'.$ps->id)}})}}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
                         <a class="btn btn-danger" href="{{url('/admin/pesanan/delete/'.$ps->id)}})}}" onclick="if(!confirm('Anda Yakin Hapus Data Pesanan?')) {return false}"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
                     </td>
+                    @endif
                 </tr>
                 @endforeach
             </tbody>
