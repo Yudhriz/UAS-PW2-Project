@@ -50,7 +50,7 @@ Route::post('/orders/add', [SuntronicController::class, 'addToPesanan'])->name('
 Route::get('/orders/success', [SuntronicController::class, 'checkoutSuccess'])->name('orders.success');
 
 //Admin
-Route::group(['middleware' => ['auth', 'role:admin-staf-pelanggan']], function () {
+Route::group(['middleware' => ['auth', 'role:admin-staff-pelanggan']], function () {
     Route::prefix('admin')->name('admin.')->group(function () {
 
         //Admin produk
